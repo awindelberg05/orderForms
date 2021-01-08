@@ -1,0 +1,59 @@
+/* Extra small devices (phones, less than 768px) */
+
+#navigation-1 {
+    display: none;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 1em 0em;
+}
+
+.navigation-1 {
+    grid-area: 1 / 2 / 2 / 3;
+    width: 70%;
+    height: 100%;
+}
+
+.navigation-2 {
+    grid-area: 1 / 1 / 2 / 2;
+    width: 30%;
+    height: 100em;
+}
+
+
+/* banner not displayed */
+
+
+/* Small devices (tablets, 768px and up) */
+
+@media (min-width: 768px) {}
+
+
+/* Medium devices (desktops, 992px and up) */
+
+@media (min-width: 992px) {}
+
+
+/* Large devices (large desktops, 1200px and up) */
+
+@media (min-width: 1200px) {
+    /* banner displayed only for desktops */
+}
+
+
+/* Devices on portrait mode */
+
+@media all and (orientation:portrait) {}
+
+
+/* Devices with screen size like 1280 horizontal pixels and 720 vertical pixels  */
+
+@media screen and (device-aspect-ratio: 16/9) {}
+
+
+/* Devices with resolution greater than 300 dots per inch */
+
+@media print and (min-resolution: 300dpi) {}
