@@ -1,11 +1,11 @@
-@import "nav.css";
+
 body {
     margin: 0;
     font-size: 16px;
     font-family: Arial, Helvetica, sans-serif;
     font-style: 1.1em;
     text-align: center;
-    /* background: #333; */
+    scroll-behavior: smooth;
 }
 
 h1,
@@ -16,3 +16,118 @@ h3 {
     padding: 1em 0px;
     font-size: 1.5rem;
 }
+
+#residence {
+    display: none;
+}
+
+#income {
+    display: none;
+}
+
+#references {
+    display: none;
+}
+
+#others {
+    display: none;
+}
+
+
+
+/*
+    Basic Navigation styles
+*/
+#topHeader {
+    margin: 1rem auto;
+}
+
+
+/* Extra small devices (phones, less than 768px) */
+
+/* #navigation-1 {
+    display: none;
+} */
+
+
+/* Small devices (tablets, 768px and up) */
+
+@media (min-width: 768px) {
+    
+}
+
+
+/* Medium devices (desktops, 992px and up) */
+
+@media (min-width: 992px) {
+
+    /* banner not displayed */
+    #topHeader {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-gap: 1em 0em;
+        text-align: center;
+    }
+
+    #navigation-1 {
+        grid-area: 1 / 2 / 2 / 3;
+        width: 70%;
+        height: 100%;
+        background: #333;
+    }
+
+    #navigation-2 {
+        grid-area: 1 / 1 / 2 / 2;
+        width: 30%;
+        height: 100em;
+    }
+
+}
+
+.btn-group button {
+    background-color: #4CAF50; /* Green background */
+    border: 1px solid green; /* Green border */
+    color: white; /* White text */
+    padding: 10px 24px; /* Some padding */
+    cursor: pointer; /* Pointer/hand icon */
+    float: left; /* Float the buttons side by side */
+}
+
+.btn-group button:not(:last-child) {
+    border-right: none; /* Prevent double borders */
+}
+
+/* Clear floats (clearfix hack) */
+.btn-group:after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Add a background color on hover */
+.btn-group button:hover {
+    background-color: #3e8e41;
+}
+
+
+/* Large devices (large desktops, 1200px and up) */
+
+@media (min-width: 1200px) {
+    /* banner displayed only for desktops */
+}
+
+
+/* Devices on portrait mode */
+
+@media all and (orientation:portrait) {}
+
+
+/* Devices with screen size like 1280 horizontal pixels and 720 vertical pixels  */
+
+@media screen and (device-aspect-ratio: 16/9) {}
+
+
+/* Devices with resolution greater than 300 dots per inch */
+
+@media print and (min-resolution: 300dpi) {}

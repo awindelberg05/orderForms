@@ -1,14 +1,17 @@
 /* Extra small devices (phones, less than 768px) */
 
-#navigation-1 {
+/* #navigation-1 {
     display: none;
-}
+} */
 
-.container {
+
+/* banner not displayed */
+.topHeader {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     grid-gap: 1em 0em;
+    background: #333;
 }
 
 .navigation-1 {
@@ -23,13 +26,11 @@
     height: 100em;
 }
 
-
-/* banner not displayed */
-
-
 /* Small devices (tablets, 768px and up) */
 
-@media (min-width: 768px) {}
+@media (min-width: 768px) {
+    
+}
 
 
 /* Medium devices (desktops, 992px and up) */
