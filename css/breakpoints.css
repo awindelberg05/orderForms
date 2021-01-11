@@ -1,21 +1,12 @@
-
 /*
     This Grid contrains the header and form grids
 */
-.grid-container {
-	display: grid;
-	grid-template-columns: 1fr;
-	grid-template-rows: 1fr 1fr;
-	grid-gap: 1em 1em;
-}
 
-.header {
-	grid-area: 1 / 1 / 2 / 2;
-}
+.grid-container {}
 
-.form-section {
-	grid-area: 2 / 1 / 3 / 2;
-}
+#header {}
+
+.form-section {}
 
 
 /*
@@ -23,39 +14,34 @@
 */
 
 .form-container {
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-	grid-gap: 1em 1em;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 1em 1em;
 }
 
 .personal {
-	grid-area: 1 / 1 / 2 / 2;
+    grid-area: 1 / 1 / 2 / 2;
 }
 
 .residence {
-	grid-area: 1 / 2 / 2 / 3;
+    grid-area: 1 / 2 / 2 / 3;
 }
 
 .income {
-	grid-area: 1 / 3 / 2 / 4;
+    grid-area: 1 / 3 / 2 / 4;
 }
 
 .references {
-	grid-area: 1 / 4 / 2 / 5;
+    grid-area: 1 / 4 / 2 / 5;
 }
 
 .others {
-	grid-area: 1 / 5 / 2 / 6;
+    grid-area: 1 / 5 / 2 / 6;
 }
 
 .signatures {
-	grid-area: 1 / 6 / 2 / 7;
+    grid-area: 1 / 6 / 2 / 7;
 }
-
-
-
-
-
 
 
 /* Extra small devices (phones, less than 768px) */
@@ -91,5 +77,3 @@
 /* Devices with resolution greater than 300 dots per inch */
 
 @media print and (min-resolution: 300dpi) {}
-
-
