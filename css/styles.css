@@ -17,6 +17,16 @@ h3 {
     font-size: 1.5rem;
 }
 
+.grid-container {
+    background-color: paleturquoise;
+}
+
+
+#personal {
+    display: block;
+    background-color: purple;
+}
+
 #residence {
     display: none;
 }
@@ -35,14 +45,6 @@ h3 {
 
 
 
-/*
-    Basic Navigation styles
-*/
-#topHeader {
-    margin: 1rem auto;
-}
-
-
 /* Extra small devices (phones, less than 768px) */
 
 /* #navigation-1 {
@@ -53,7 +55,18 @@ h3 {
 /* Small devices (tablets, 768px and up) */
 
 @media (min-width: 768px) {
-    
+    /* banner not displayed */
+    #topHeader {
+
+    }
+
+    #navigation-1 {
+        background: red;
+    }
+
+    #navigation-2 {
+    }
+
 }
 
 
@@ -62,28 +75,64 @@ h3 {
 @media (min-width: 992px) {
 
     /* banner not displayed */
+
+}
+
+/* Large devices (large desktops, 1200px and up) */
+
+@media (min-width: 1200px) {
+    /* banner displayed only for desktops */
+
+    /* banner not displayed */
     #topHeader {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-        grid-gap: 1em 0em;
-        text-align: center;
+
     }
 
     #navigation-1 {
-        grid-area: 1 / 2 / 2 / 3;
-        width: 70%;
-        height: 100%;
-        background: #333;
+        background: green;
     }
 
     #navigation-2 {
-        grid-area: 1 / 1 / 2 / 2;
-        width: 30%;
-        height: 100em;
+    }
+}
+
+
+/* Devices with screen size like 1280 horizontal pixels and 720 vertical pixels  */
+
+@media screen and (device-aspect-ratio: 16/9) {
+    /* banner not displayed */
+    #topHeader {
+
     }
 
+    #navigation-1 {
+        background: purple;
+    }
+
+    #navigation-2 {
+
+    }
 }
+
+
+/* Devices with resolution greater than 300 dots per inch */
+
+@media print and (min-resolution: 300dpi) {
+    /* banner not displayed */
+    #topHeader {
+
+    }
+
+    #navigation-1 {
+        background: orangered;
+    }
+
+    #navigation-2 {
+    }
+}
+
+
+
 
 .btn-group button {
     background-color: #4CAF50; /* Green background */
@@ -109,25 +158,3 @@ h3 {
 .btn-group button:hover {
     background-color: #3e8e41;
 }
-
-
-/* Large devices (large desktops, 1200px and up) */
-
-@media (min-width: 1200px) {
-    /* banner displayed only for desktops */
-}
-
-
-/* Devices on portrait mode */
-
-@media all and (orientation:portrait) {}
-
-
-/* Devices with screen size like 1280 horizontal pixels and 720 vertical pixels  */
-
-@media screen and (device-aspect-ratio: 16/9) {}
-
-
-/* Devices with resolution greater than 300 dots per inch */
-
-@media print and (min-resolution: 300dpi) {}

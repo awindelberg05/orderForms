@@ -7,202 +7,98 @@
     <title>Document</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/mobile.css" />
+    <link rel="stylesheet" href="./css/breakpoints.css" />
 
 </head>
 
 <body>
 
-    <section id="customHeader">
-        <div id="topHeader">
+    <div class="grid-container">
+        <section id="header">
             <!-- Company Logo -->
-            <div id="navigation-1">
-                <img src="./img/BHF_Logo.jpeg" alt="Company Logo" id="logo">
+            <div class="header-logo">
+                <img src="./img/BHF_Logo.png" alt="Company Logo" class="header-logo-img">
             </div>
 
             <!-- Navigation Title -->
-            <div id="navigation-2">
+            <div class="header-title">
                 <h3>Customer Application</h3>
             </div>
-        </div>
-    </section>
-
-    <form>
-        <section id="personal">
-            <!-- Personal Form -->
-            <input type="text" name="fname" placeholder="Full Name">
-            <input type="text" name="email" id="email" placeholder="Email">
-            <input type="date" id="start" name="trip-start"
-                    value="2018-07-22"
-                    min="2018-01-01" max="2018-12-31">
-            <fieldset id="dLicense">
-                <select id="state" name="state">
-                    <option value="AL">AL</option>
-                    <option value="AK">AK</option>
-                    <option value="AZ">AZ</option>
-                    <option value="AR">AR</option>
-                    <option value="CA">CA</option>
-                    <option value="CO">CO</option>
-                    <option value="CT">CT</option>
-                    <option value="DE">DE</option>
-                    <option value="FL">FL</option>
-                    <option value="GA">GA</option>
-                    <option value="HI">HI</option>
-                    <option value="ID">ID</option>
-                    <option value="IL">IL</option>
-                    <option value="IN">IN</option>
-                    <option value="IA">IA</option>
-                    <option value="KS">KS</option>
-                    <option value="KY">KY</option>
-                    <option value="LA">LA</option>
-                    <option value="ME">ME</option>
-                    <option value="MD">MD</option>
-                    <option value="MA">MA</option>
-                    <option value="MI">MI</option>
-                    <option value="MN">MN</option>
-                    <option value="MS">MS</option>
-                    <option value="MO">MO</option>
-                    <option value="MT">MT</option>
-                    <option value="NE">NE</option>
-                    <option value="NV">NV</option>
-                    <option value="NH">NH</option>
-                    <option value="NY">NY</option>
-                    <option value="NC">NC</option>
-                    <option value="ND">ND</option>
-                    <option value="OH">OH</option>
-                    <option value="OK">OK</option>
-                    <option value="OR">OR</option>
-                    <option value="PA">PA</option>
-                    <option value="RI">RI</option>
-                    <option value="SC">SC</option>
-                    <option value="SD">SD</option>
-                    <option value="TN">TN</option>
-                    <option value="TX">TX</option>
-                    <option value="UT">UT</option>
-                    <option value="VT">VT</option>
-                    <option value="VA">VA</option>
-                    <option value="WA">WA</option>
-                    <option value="WV">WV</option>
-                    <option value="WI">WI</option>
-                    <option value="WY">WY</option>
-                </select>
-                <input type="date" id="exp" name="expDate"
-                        value="2018-07-22"
-                        min="2018-01-01" max="2018-12-31">
-            </fieldset>
-
-            <button id="co-applicant">co-applicant</button>
         </section>
-
-        <section id="residence">
-            <!-- residence -->
-            <input type="text" name="address" id="address">
-            <input type="text" name="city" id="city">
-            <select id="state" name="state">
-                <option value="AL">AL</option>
-                <option value="AK">AK</option>
-                <option value="AZ">AZ</option>
-                <option value="AR">AR</option>
-                <option value="CA">CA</option>
-                <option value="CO">CO</option>
-                <option value="CT">CT</option>
-                <option value="DE">DE</option>
-                <option value="FL">FL</option>
-                <option value="GA">GA</option>
-                <option value="HI">HI</option>
-                <option value="ID">ID</option>
-                <option value="IL">IL</option>
-                <option value="IN">IN</option>
-                <option value="IA">IA</option>
-                <option value="KS">KS</option>
-                <option value="KY">KY</option>
-                <option value="LA">LA</option>
-                <option value="ME">ME</option>
-                <option value="MD">MD</option>
-                <option value="MA">MA</option>
-                <option value="MI">MI</option>
-                <option value="MN">MN</option>
-                <option value="MS">MS</option>
-                <option value="MO">MO</option>
-                <option value="MT">MT</option>
-                <option value="NE">NE</option>
-                <option value="NV">NV</option>
-                <option value="NH">NH</option>
-                <option value="NY">NY</option>
-                <option value="NC">NC</option>
-                <option value="ND">ND</option>
-                <option value="OH">OH</option>
-                <option value="OK">OK</option>
-                <option value="OR">OR</option>
-                <option value="PA">PA</option>
-                <option value="RI">RI</option>
-                <option value="SC">SC</option>
-                <option value="SD">SD</option>
-                <option value="TN">TN</option>
-                <option value="TX">TX</option>
-                <option value="UT">UT</option>
-                <option value="VT">VT</option>
-                <option value="VA">VA</option>
-                <option value="WA">WA</option>
-                <option value="WV">WV</option>
-                <option value="WI">WI</option>
-                <option value="WY">WY</option>
-            </select>
-            <input type="text" name="zip" id="zip">
-
-            <select id="state" name="state">
-                <option value="CT">Sunday</option>
-                <option value="AL">Monday</option>
-                <option value="AK">Tuesday</option>
-                <option value="AZ">Wednesday</option>
-                <option value="AR">Thursday</option>
-                <option value="CA">Friday</option>
-                <option value="CO">Saturday</option>
-            </select>
-        </section>
-
-        <section id="income">
-            <!-- income -->
-            <div id="iApplicant">
-                <input type="text" name="employer" id="employer">
-                <input type="text" name="empAddress" id="empAddress">
-                <input type="text" name="jobTitle" id="jobTitle">
-                <input type="text" name="shift" id="shift">
-                <input type="date" id="start" name="trip-start"
-                        value="2018-07-22"
-                        min="2018-01-01" max="2018-12-31">
-                <input type="text" name="phone" id="phone">
-                <input type="text" name="extDept" id="extDept">
-                <input type="text" name="supevisor" id="supervisor">
-                <div name="otherIncome" class="btn-group">
-                    <button>Disability</button>
-                    <button>SSI</button>
-                    <button>AFDC</button>
-                    <button>Child Support</button>
-                    <button>Other</button> <!-- Convert this into a label and add a text field next to it -->
-                </div>
         
-                <div name="payFrequency" class="btn-group">
-                    <button>Weekly</button>
-                    <button>Bi-Weekly</button>
-                    <button>Semi-Monthly</button>
-                    <button>Monthly</button>
-                </div>
+        <section id="form-section">
+            <form class="form-container">
+                <section id="personal">
+                    <!-- Personal Form -->
+                    <input type="text" name="fname" placeholder="Full Name">
+                    <input type="text" name="email" id="email" placeholder="Email">
+                    <input type="date" id="start" name="trip-start"
+                            value="2018-07-22"
+                            min="2018-01-01" max="2018-12-31">
+                    <fieldset id="dLicense">
+                        <select id="state" name="state">
+                            <option value="AL">AL</option>
+                            <option value="AK">AK</option>
+                            <option value="AZ">AZ</option>
+                            <option value="AR">AR</option>
+                            <option value="CA">CA</option>
+                            <option value="CO">CO</option>
+                            <option value="CT">CT</option>
+                            <option value="DE">DE</option>
+                            <option value="FL">FL</option>
+                            <option value="GA">GA</option>
+                            <option value="HI">HI</option>
+                            <option value="ID">ID</option>
+                            <option value="IL">IL</option>
+                            <option value="IN">IN</option>
+                            <option value="IA">IA</option>
+                            <option value="KS">KS</option>
+                            <option value="KY">KY</option>
+                            <option value="LA">LA</option>
+                            <option value="ME">ME</option>
+                            <option value="MD">MD</option>
+                            <option value="MA">MA</option>
+                            <option value="MI">MI</option>
+                            <option value="MN">MN</option>
+                            <option value="MS">MS</option>
+                            <option value="MO">MO</option>
+                            <option value="MT">MT</option>
+                            <option value="NE">NE</option>
+                            <option value="NV">NV</option>
+                            <option value="NH">NH</option>
+                            <option value="NY">NY</option>
+                            <option value="NC">NC</option>
+                            <option value="ND">ND</option>
+                            <option value="OH">OH</option>
+                            <option value="OK">OK</option>
+                            <option value="OR">OR</option>
+                            <option value="PA">PA</option>
+                            <option value="RI">RI</option>
+                            <option value="SC">SC</option>
+                            <option value="SD">SD</option>
+                            <option value="TN">TN</option>
+                            <option value="TX">TX</option>
+                            <option value="UT">UT</option>
+                            <option value="VT">VT</option>
+                            <option value="VA">VA</option>
+                            <option value="WA">WA</option>
+                            <option value="WV">WV</option>
+                            <option value="WI">WI</option>
+                            <option value="WY">WY</option>
+                        </select>
+                        <input type="date" id="exp" name="expDate"
+                                value="2018-07-22"
+                                min="2018-01-01" max="2018-12-31">
+                    </fieldset>
         
-                <input type="text" name="payPeriod" id="payPeriod">
-                <input type="text" name="payDay" id="payDay">
-            </div>
-            <!-- If we can't find a better way just stick the co-applicant here -->
-        </section>
-
-        <section id="references">
-            <!-- references -->
-            <div id="rApplicant">
-                <fieldset>
-                    <input type="text" name="rName" id="rName">
-                    <input type="text" name="rEmail" id="rEmail">
-                    <input type="text" name="aRelation" id="aRelation">
-                    <input type="text" name="rAddress" id="rAddress">
-                    <input type="text" name="rCity" id="rCity">
+                    <button id="co-applicant">co-applicant</button>
+                </section>
+        
+                <section id="residence">
+                    <!-- residence -->
+                    <input type="text" name="address" id="address">
+                    <input type="text" name="city" id="city">
                     <select id="state" name="state">
                         <option value="AL">AL</option>
                         <option value="AK">AK</option>
@@ -253,34 +149,142 @@
                         <option value="WI">WI</option>
                         <option value="WY">WY</option>
                     </select>
-                    <input type="text" name="rZip" id="rZip">
-                    <input type="text" name="rPhone" id="rPhone">
-                </fieldset>
-            </div>
+                    <input type="text" name="zip" id="zip">
+        
+                    <select id="state" name="state">
+                        <option value="CT">Sunday</option>
+                        <option value="AL">Monday</option>
+                        <option value="AK">Tuesday</option>
+                        <option value="AZ">Wednesday</option>
+                        <option value="AR">Thursday</option>
+                        <option value="CA">Friday</option>
+                        <option value="CO">Saturday</option>
+                    </select>
+                </section>
+        
+                <section id="income">
+                    <!-- income -->
+                    <div id="iApplicant">
+                        <input type="text" name="employer" id="employer">
+                        <input type="text" name="empAddress" id="empAddress">
+                        <input type="text" name="jobTitle" id="jobTitle">
+                        <input type="text" name="shift" id="shift">
+                        <input type="date" id="start" name="trip-start"
+                                value="2018-07-22"
+                                min="2018-01-01" max="2018-12-31">
+                        <input type="text" name="phone" id="phone">
+                        <input type="text" name="extDept" id="extDept">
+                        <input type="text" name="supevisor" id="supervisor">
+                        <div name="otherIncome" class="btn-group">
+                            <button>Disability</button>
+                            <button>SSI</button>
+                            <button>AFDC</button>
+                            <button>Child Support</button>
+                            <button>Other</button> <!-- Convert this into a label and add a text field next to it -->
+                        </div>
+                
+                        <div name="payFrequency" class="btn-group">
+                            <button>Weekly</button>
+                            <button>Bi-Weekly</button>
+                            <button>Semi-Monthly</button>
+                            <button>Monthly</button>
+                        </div>
+                
+                        <input type="text" name="payPeriod" id="payPeriod">
+                        <input type="text" name="payDay" id="payDay">
+                    </div>
+                    <!-- If we can't find a better way just stick the co-applicant here -->
+                </section>
+        
+                <section id="references">
+                    <!-- references -->
+                    <div id="rApplicant">
+                        <fieldset>
+                            <input type="text" name="rName" id="rName">
+                            <input type="text" name="rEmail" id="rEmail">
+                            <input type="text" name="aRelation" id="aRelation">
+                            <input type="text" name="rAddress" id="rAddress">
+                            <input type="text" name="rCity" id="rCity">
+                            <select id="state" name="state">
+                                <option value="AL">AL</option>
+                                <option value="AK">AK</option>
+                                <option value="AZ">AZ</option>
+                                <option value="AR">AR</option>
+                                <option value="CA">CA</option>
+                                <option value="CO">CO</option>
+                                <option value="CT">CT</option>
+                                <option value="DE">DE</option>
+                                <option value="FL">FL</option>
+                                <option value="GA">GA</option>
+                                <option value="HI">HI</option>
+                                <option value="ID">ID</option>
+                                <option value="IL">IL</option>
+                                <option value="IN">IN</option>
+                                <option value="IA">IA</option>
+                                <option value="KS">KS</option>
+                                <option value="KY">KY</option>
+                                <option value="LA">LA</option>
+                                <option value="ME">ME</option>
+                                <option value="MD">MD</option>
+                                <option value="MA">MA</option>
+                                <option value="MI">MI</option>
+                                <option value="MN">MN</option>
+                                <option value="MS">MS</option>
+                                <option value="MO">MO</option>
+                                <option value="MT">MT</option>
+                                <option value="NE">NE</option>
+                                <option value="NV">NV</option>
+                                <option value="NH">NH</option>
+                                <option value="NY">NY</option>
+                                <option value="NC">NC</option>
+                                <option value="ND">ND</option>
+                                <option value="OH">OH</option>
+                                <option value="OK">OK</option>
+                                <option value="OR">OR</option>
+                                <option value="PA">PA</option>
+                                <option value="RI">RI</option>
+                                <option value="SC">SC</option>
+                                <option value="SD">SD</option>
+                                <option value="TN">TN</option>
+                                <option value="TX">TX</option>
+                                <option value="UT">UT</option>
+                                <option value="VT">VT</option>
+                                <option value="VA">VA</option>
+                                <option value="WA">WA</option>
+                                <option value="WV">WV</option>
+                                <option value="WI">WI</option>
+                                <option value="WY">WY</option>
+                            </select>
+                            <input type="text" name="rZip" id="rZip">
+                            <input type="text" name="rPhone" id="rPhone">
+                        </fieldset>
+                    </div>
+                </section>
+        
+                <section id="others">
+                    <!-- others -->
+                    <input type="text" name="vehicleYR" id="vehicleYR">
+                    <input type="text" name="vehicleMK" id="vehicleMK">
+                    <input type="text" name="vehicleML" id="vehicleML">
+                    <input type="text" name="vehicleCL" id="vehicleCL">
+                    <input type="text" name="vehicleTG" id="vehicleTG">
+                    <input type="text" name="vehicleRG" id="vehicleRG">
+                    <input type="text" name="vehicleFN" id="vehicleFN">
+        
+                    <!-- A Place we can put the Initials or can this be placed in the signing area?-->
+                    <input type="checkbox" name="subscribe" id="subscribe">
+                    <input type="text" name="vehicleFN" id="vehicleFN">
+                </section>
+        
+                <section id="signatures">
+                    <!-- signatures -->
+        
+                </section>
+        
+            </form>
         </section>
-
-        <section id="others">
-            <!-- others -->
-            <input type="text" name="vehicleYR" id="vehicleYR">
-            <input type="text" name="vehicleMK" id="vehicleMK">
-            <input type="text" name="vehicleML" id="vehicleML">
-            <input type="text" name="vehicleCL" id="vehicleCL">
-            <input type="text" name="vehicleTG" id="vehicleTG">
-            <input type="text" name="vehicleRG" id="vehicleRG">
-            <input type="text" name="vehicleFN" id="vehicleFN">
-
-            <!-- A Place we can put the Initials or can this be placed in the signing area?-->
-            <input type="checkbox" name="subscribe" id="subscribe">
-            <input type="text" name="vehicleFN" id="vehicleFN">
-        </section>
-
-        <section id="signatures">
-            <!-- signatures -->
-            
-        </section>
-
-    </form>
-
+    
+    </div>
 </body>
 
 </html>
