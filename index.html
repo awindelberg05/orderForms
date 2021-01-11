@@ -7,9 +7,7 @@
     <title>Document</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="./css/styles.css" />
-    <link rel="stylesheet" href="./css/mobile.css" />
-    <link rel="stylesheet" href="./css/breakpoints.css" />
-
+    <link rel="stylesheet" href="./css/layouts.css" />
 </head>
 
 <body>
@@ -21,21 +19,20 @@
                 <img src="./img/BHF_Logo.png" alt="Company Logo">
             </div>
 
-            <!-- Navigation Title -->
-            <div class="header-title">
-                <h3> Order Form Application </h3>
-            </div>
+            <h3 class="header-title"> Order Form Application </h3>
         </section>
 
         <section id="form-section">
             <form class="form-container">
-                <section id="personal">
+                <section class="form-section-base" id="personal">
+                    <div class="form-section-banner" id="personal-section-banner"> Personal </div>
                     <!-- Personal Form -->
-                    <input type="text" name="fname" placeholder="Full Name">
-                    <input type="text" name="email" id="email" placeholder="Email">
-                    <input type="date" id="start" name="trip-start" value="2018-07-22" min="2018-01-01" max="2018-12-31">
-                    <fieldset id="dLicense">
-                        <select id="state" name="state">
+                    <div class="">
+                        <input type="text" name="fname" placeholder="Full Name">
+                        <input type="text" name="email" id="email" placeholder="Email">
+                        <input type="date" id="start" name="trip-start" value="2018-07-22" min="2018-01-01" max="2018-12-31">
+                        <fieldset id="dLicense">
+                            <select id="state" name="state">
                             <option value="AL">AL</option>
                             <option value="AK">AK</option>
                             <option value="AZ">AZ</option>
@@ -85,13 +82,15 @@
                             <option value="WI">WI</option>
                             <option value="WY">WY</option>
                         </select>
-                        <input type="date" id="exp" name="expDate" value="2018-07-22" min="2018-01-01" max="2018-12-31">
-                    </fieldset>
+                            <input type="date" id="exp" name="expDate" value="2018-07-22" min="2018-01-01" max="2018-12-31">
+                        </fieldset>
 
-                    <button id="co-applicant">co-applicant</button>
+                        <button id="co-applicant">co-applicant</button>
+                    </div>
                 </section>
 
-                <section id="residence">
+                <section class="form-section-base" id="residence">
+                    <div id="residence-section-banner" class="section-banner"> Residence </div>
                     <!-- residence -->
                     <input type="text" name="address" id="address">
                     <input type="text" name="city" id="city">
@@ -158,7 +157,8 @@
                     </select>
                 </section>
 
-                <section id="income">
+                <section class="form-section-base" id="income">
+                    <div id="income-section-banner" class="section-banner"> Income </div>
                     <!-- income -->
                     <div id="iApplicant">
                         <input type="text" name="employer" id="employer">
@@ -191,7 +191,8 @@
                     <!-- If we can't find a better way just stick the co-applicant here -->
                 </section>
 
-                <section id="references">
+                <section class="form-section-base" id="references">
+                    <div id="references-section-banner" class="section-banner"> References </div>
                     <!-- references -->
                     <div id="rApplicant">
                         <fieldset>
@@ -256,7 +257,8 @@
                     </div>
                 </section>
 
-                <section id="others">
+                <section class="form-section-base" id="others">
+                    <div id="others-section-banner" class="section-banner"> Other </div>
                     <!-- others -->
                     <input type="text" name="vehicleYR" id="vehicleYR">
                     <input type="text" name="vehicleMK" id="vehicleMK">
@@ -271,7 +273,8 @@
                     <input type="text" name="vehicleFN" id="vehicleFN">
                 </section>
 
-                <section id="signatures">
+                <section class="form-section-base" id="signatures">
+                    <div id="signatures-section-banner" class="section-banner"> Signatures </div>
                     <!-- signatures -->
 
                 </section>

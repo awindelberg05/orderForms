@@ -1,0 +1,89 @@
+/*
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+//  layouts.css - Grid settings, sizing
+//  Description - This file will only hold the following attributes
+//                display, display settings, width, height
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+*/
+
+body {
+    height: 100vh;
+}
+
+
+/*
+    The entire documents container
+*/
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 100vw;
+    grid-template-rows: minmax(180px, 5vh) minmax(0, 100%);
+    /*
+        maybe move somewhere
+    */
+    height: 100vh;
+    /* Testing remove this later*/
+    background-color: #333;
+}
+
+#header {
+    grid-area: 1 / 1 / 2 / 2;
+    /* Testing remove this later*/
+    background-color: cadetblue;
+}
+
+#form-section {
+    height: 100%;
+    /* Testing remove this later*/
+    grid-area: 2 / 1 / 3 / 2;
+}
+
+
+/*
+    The Header Grid
+*/
+
+#header {
+    /* height: 100%; */
+    display: grid;
+    align-items: center;
+}
+
+@media all and (orientation:portrait) {
+    #header {
+        grid-template-rows: repeat(auto-fit, minmax(120px, 1fr));
+    }
+}
+
+@media all and (orientation:landscape) {
+    #header {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
+}
+
+.header-title {
+    padding: .5rem;
+}
+
+.header-logo>img {
+    max-width: 100%;
+    width: auto;
+    height: auto;
+}
+
+
+/*
+    Personal Section
+*/
+
+.form-section-base {
+    min-height: 500px;
+    max-height: 70vh;
+    padding: 0;
+}
+
+.form-section-banner {
+    width: 100vw;
+    height: 3vh;
+}

@@ -16,12 +16,49 @@ h3 {
     font-size: 1.5rem;
 }
 
-.grid-container {}
 
-#personal {}
+/*
+/////////////////////////////////////////////////////////////////////////////
+    Styling
+/////////////////////////////////////////////////////////////////////////////
+*/
+
+
+/*
+    Form Section - Holds the entire form
+    Styling 
+*/
+
+#form-section {
+    background-color: blanchedalmond;
+    overflow: scroll;
+}
+
+
+/*
+    Header
+*/
+
+.header-logo>img {
+    margin: 0 auto;
+    display: block;
+}
+
+
+/*
+    Form
+*/
+
+#personal-section-banner {
+    background-color: brown;
+}
+
+#personal {
+    background-color: chartreuse;
+}
 
 #residence {
-    display: none;
+    background-color: blueviolet;
 }
 
 #income {
@@ -35,6 +72,15 @@ h3 {
 #others {
     display: none;
 }
+
+#signatures {
+    display: none;
+}
+
+
+/*
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+*/
 
 
 /* Extra small devices (phones, less than 768px) */
@@ -69,11 +115,9 @@ h3 {
 @media (min-width: 1200px) {
     /* banner displayed only for desktops */
     /* banner not displayed */
-    #topHeader {}
     #navigation-1 {
         background: green;
     }
-    #navigation-2 {}
 }
 
 
@@ -81,11 +125,9 @@ h3 {
 
 @media screen and (device-aspect-ratio: 16/9) {
     /* banner not displayed */
-    #topHeader {}
     #navigation-1 {
         background: purple;
     }
-    #navigation-2 {}
 }
 
 
@@ -93,11 +135,9 @@ h3 {
 
 @media print and (min-resolution: 300dpi) {
     /* banner not displayed */
-    #topHeader {}
     #navigation-1 {
         background: orangered;
     }
-    #navigation-2 {}
 }
 
 .btn-group button {
