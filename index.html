@@ -4,12 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1, user-scalable=no">
-    <title>Document</title>
+    <title> Buddy's Order Form </title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
     <script src="./js/main.js"></script>
     <script src="./js/data.js"></script>
 
+    <link rel="icon" href="https://www.buddyrents.com/media/favicon/default/Buddys.ico" type="image/x-icon">
     <link rel="import" href="./template/templates.html" id="templates">
     <link rel="stylesheet" href="./css/styles.css" />
     <link rel="stylesheet" href="./css/layouts.css" />
@@ -44,9 +45,7 @@
                         <select id="licenseState" name="licenseState"></select>
                         <input type="date" id="licenseExp" name="expDate" value="2018-07-22" min="2018-01-01" max="2018-12-31">
                     </fieldset>
-                    <button id="coApplicantBtn" class="">
-                        
-                    </button>
+                    <button id="coApplicantBtn"></button>
                 </div>
             </section>
 
@@ -77,12 +76,7 @@
                         <!-- Convert this into a label and add a text field next to it -->
                     </div>
 
-                    <div name="payFrequency" class="btn-group">
-                        <button>Weekly</button>
-                        <button>Bi-Weekly</button>
-                        <button>Semi-Monthly</button>
-                        <button>Monthly</button>
-                    </div>
+                    <div name="payFrequency" class="btn-group"></div>
 
                     <input type="text" name="payPeriod" id="payPeriod">
                     <input type="text" name="payDay" id="payDay">
@@ -157,13 +151,9 @@
 
 
         // retrieve the select element for the state elements
-        const stateFieldSet = document.getElementById('licenseState');
+        // const stateFieldSet = document.getElementById('licenseState');
         // Append a copy of it
-        stateFieldSet.appendChild(stateOptionsFragment.cloneNode(true));
-
-
-
-
+        // stateFieldSet.appendChild(stateOptionsFragment.cloneNode(true));
 
         // const otherIncomeBtnGroup = document.getElementById('otherIncome');
         // otherIncomeBtnGroup.appendChild(otherIncomeFragment.cloneNode(true));

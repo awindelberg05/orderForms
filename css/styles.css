@@ -8,8 +8,7 @@ body {
 }
 
 h1,
-h2,
-h3 {
+h2 {
     /* 24 ÷ 16 = 1.5 */
     margin: 0px;
     padding: 1em 0px;
@@ -45,10 +44,7 @@ h3 {
 /////////////////////////////////////////////////////////////////////////////
 */
 
-.header-logo>img {
-    margin: 0 auto;
-    display: block;
-}
+.header-logo>img {}
 
 
 /*
@@ -82,6 +78,7 @@ h3 {
 }
 
 #residence {
+    display: none;
     background-color: blueviolet;
 }
 
