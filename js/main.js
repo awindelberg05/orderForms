@@ -1,36 +1,41 @@
-// This function creates a fragment that is later appended to the DOM to dynamically create these elements.
-let stateFragment = () => {
+/*
+    Fetching an HTML Template for input pairs.
+    If unfamiliar with templating read the documention below
+    to get an understanding : 
+    https://css-tricks.com/an-introduction-to-web-components/
+*/
 
-    let stateAbbreviations = ["AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DE", "FL", "GA", "HI", "ID", "IL", "IN", "IA", "KS", "KY",
-        "LA", "ME", "MD", "MA", "MI", "MN", "MS", "MO", "MT", "NE", "NV", "NH", "NJ", "NM", "NY", "NC", "ND", "OH", "OK", "OR", "PA", "RI",
-        "SC", "SD", "TN", "TX", "UT", "VT", "VA", "WA", "WV", "WI", "WY"
-    ];
+/*
+    Function : inputTemplate
+    Description : This function retrieves the template from index.html and places
+                  an object into the template variable.
+*/
+const inputTemplate = (templateID, templateText) => {
+    const template = document.getElementById("label-input-template");
+    const instance = document.importNode(template.content, true);
 
-    let fragment = document.createDocumentFragment();
+    instance.querySelector('.template-label').innerHTML = templateText;
+    instance.querySelector('.template-input').placeholder = templateText;
+    instance.querySelector('.template-input').id = templateID;
 
-    stateAbbreviations.forEach(state => {
-        let stateOption = document.createElement('option');
-        stateOption.value = state;
-        stateOption.innerText = state;
-        fragment.appendChild(stateOption);
-    });
-
-    return fragment;
+    // Place element in it's proper place in the dom
 
 }
 
-
-let dayFragment = () => {
-
-    let daysArray = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+/*
+    Function : selectFragment
+    Description : This function creates a fragment that is later appended to the 
+                    DOM to dynamically create these elements.
+*/
+const selectFragment = (dataArray) => {
 
     let fragment = document.createDocumentFragment();
 
-    daysArray.forEach(day => {
-        let dayOption = document.createElement('option');
-        dayOption.value = day;
-        dayOption.innerText = day;
-        fragment.appendChild(dayOption);
+    dataArray.forEach(elem => {
+        let selectOption = document.createElement('option');
+        selectOption.value = elem;
+        selectOption.innerText = elem;
+        fragment.appendChild(selectOption);
     });
 
     return fragment;

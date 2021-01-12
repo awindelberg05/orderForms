@@ -30,7 +30,10 @@ h3 {
 /////////////////////////////////////////////////////////////////////////////
 */
 
-#form-section {
+
+/* #form-section { */
+
+#form-container {
     background-color: blanchedalmond;
     overflow: scroll;
 }
@@ -54,8 +57,24 @@ h3 {
 /////////////////////////////////////////////////////////////////////////////
 */
 
-#personal-section-banner {
+.form-section-banner {}
+
+
+/*
+/////////////////////////////////////////////////////////////////////////////
+    Personal Section 
+/////////////////////////////////////////////////////////////////////////////
+*/
+
+.personal-section-banner {
     background-color: brown;
+    align-items: center;
+}
+
+.form-section-personal {
+    background-color: black;
+    align-items: center;
+    padding: 1rem;
 }
 
 #personal {
