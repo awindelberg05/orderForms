@@ -73,12 +73,7 @@
                     <input type="text" name="phone" id="phone">
                     <input type="text" name="extDept" id="extDept">
                     <input type="text" name="supevisor" id="supervisor">
-                    <div name="otherIncome" class="btn-group">
-                        <button>Disability</button>
-                        <button>SSI</button>
-                        <button>AFDC</button>
-                        <button>Child Support</button>
-                        <button>Other</button>
+                    <div id="otherIncome" class="btn-group">
                         <!-- Convert this into a label and add a text field next to it -->
                     </div>
 
@@ -105,8 +100,7 @@
                         <input type="text" name="aRelation" id="aRelation">
                         <input type="text" name="rAddress" id="rAddress">
                         <input type="text" name="rCity" id="rCity">
-                        <select id="state" name="state">
-                            </select>
+                        <select id="state" name="state"></select>
                         <input type="text" name="rZip" id="rZip">
                         <input type="text" name="rPhone" id="rPhone">
                     </fieldset>
@@ -157,12 +151,25 @@
         // Get a list of state options
         let stateOptionsFragment = selectFragment(stateAbbreviations);
         let dayOptionsFragment = selectFragment(daysArray);
+        let otherIncomeFragment = btnGroupFragment(otherIncomeArray);
+        let payFrequencyFragment = btnGroupFragment(payFrequencyArray);
+
+
 
         // retrieve the select element for the state elements
-        let stateFieldSet = document.getElementById('licenseState');
+        const stateFieldSet = document.getElementById('licenseState');
         // Append a copy of it
         stateFieldSet.appendChild(stateOptionsFragment.cloneNode(true));
 
+
+
+
+
+        // const otherIncomeBtnGroup = document.getElementById('otherIncome');
+        // otherIncomeBtnGroup.appendChild(otherIncomeFragment.cloneNode(true));
+
+
+        /*Testing*/
         inputTemplate();
     });
 </script>

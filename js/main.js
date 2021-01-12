@@ -41,3 +41,22 @@ const selectFragment = (dataArray) => {
     return fragment;
 
 }
+
+/*
+    Function : btnGroupFragment
+    Description  : This function creates a fragment that is used to build a
+                   buttonGroup object
+*/
+
+const btnGroupFragment = (dataArray) => {
+
+    let fragment = document.createDocumentFragment();
+
+    dataArray.forEach(elem => {
+        let btnOption = document.createElement('button');
+        btnOption.innerHTML = elem;
+        fragment.appendChild(btnOption);
+    });
+
+    return fragment;
+}
