@@ -19,7 +19,7 @@ body {
 
 .grid-container {
     display: grid;
-    grid-template-rows: minmax(120px, 5vh) 1fr;
+    grid-template-rows: minmax(120px, 4vh) 1fr;
     /*
         maybe move somewhere
     */
@@ -46,7 +46,7 @@ body {
     /* Testing remove this later*/
     background-color: cadetblue;
     display: grid;
-    grid-template-columns: minmax(100px, 200px) 1fr;
+    grid-template-columns: 1fr 2fr;
 }
 
 .header-title {
