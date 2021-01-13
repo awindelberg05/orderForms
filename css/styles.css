@@ -69,8 +69,8 @@ h2 {
 
 .form-section-personal {
     background-color: black;
-    align-items: center;
-    padding: 1rem;
+    /* align-items: center;
+    padding: 1rem; */
 }
 
 #personal {

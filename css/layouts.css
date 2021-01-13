@@ -71,7 +71,6 @@ body {
 .header-logo>img {
     float: left;
     max-width: 100%;
-    margin: 0 auto;
     width: auto;
     height: auto;
 }
@@ -85,19 +84,14 @@ body {
 
 .form-section-base {
     display: grid;
-    grid-template-rows: 1fr 1fr;
+    height: 100%;
+    grid-template-rows: minmax(40px, .10fr) 1.90fr;
     padding: 0;
 }
 
 .form-section-banner {
     display: grid;
-    /* width: 100vw; */
-    height: 6vh;
+    align-content: center;
 }
 
-.form-section-personal {
-    display: grid;
-    /* grid-template-rows: repeat(auto-fit, minmax(100vw, 1fr)); */
-    /* grid-template-rows: repeat(6, minmax(100px, .75fr)); */
-    height: 100%;
-}
+.form-section-personal {}
