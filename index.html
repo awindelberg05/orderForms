@@ -42,7 +42,7 @@
         </section>
 
         <!-- Breadcrumbs navigation menu -->
-        <ol class="arrows">
+        <ol id="breadcrumbs-four">
             <li><a href="#">Personal</a></li>
             <li><a href="#">Residence</a></li>
             <li><a href="#">Income</a></li>
@@ -54,7 +54,7 @@
         <form class="form-container">
 
             <!-- Personal Form -->
-            <h3 class="form-section-headers" id="section-header-personal"> Personal </h3>
+            <h3 class="form-section-header-main" id="section-header-personal"> Personal </h3>
             <section id="personal">
                 <div class="form-section-personal">
                     <div class="label-input-pair">
@@ -91,11 +91,12 @@
                     <label class="coApplicantLbl">Add a Co-Applicant ?</label>
                     <button id="coApplicantBtn"> Add Co-Applicant </button>
                 </div>
+                <button class="next-button" value="residence"> Next </button>
             </section>
 
 
             <!-- Residence -->
-            <h3 class="form-section-headers"> Residence </h3>
+            <h3 class="form-section-header" id="section-header-residence"> Residence </h3>
             <section id="residence">
                 <!-- residence -->
                 <input type="text" name="address" id="address">
@@ -108,7 +109,7 @@
 
 
             <!-- income -->
-            <h3 class="form-section-headers"> Income </h3>
+            <h3 class="form-section-header" id="section-header-income"> Income </h3>
             <section id="income">
                 <div>
                     <input type="text" name="employer" id="employer">
@@ -133,7 +134,7 @@
 
 
             <!-- references -->
-            <h3 class="form-section-headers"> References </h3>
+            <h3 class="form-section-header" id="section-header-references"> References </h3>
             <section id="references">
                 <div>
                     <fieldset>
@@ -150,8 +151,8 @@
             </section>
 
             <!-- others -->
-            <h3 class="form-section-headers"> Other </h3>
-            <section id="others">
+            <h3 class="form-section-header" id="section-header-other"> Other </h3>
+            <section id="other">
                 <input type="text" name="vehicleYR" id="vehicleYR">
                 <input type="text" name="vehicleMK" id="vehicleMK">
                 <input type="text" name="vehicleML" id="vehicleML">
@@ -166,7 +167,7 @@
             </section>
 
             <!-- Signatures -->
-            <h3 class="form-section-headers"> Signatures </h3>
+            <h3 class="form-section-header" id="section-header-signatures"> Signatures </h3>
             <section id="signatures">
                 <!-- signatures -->
                 <input type="text" name="asd" id="asd">

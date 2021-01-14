@@ -71,7 +71,76 @@ footer>p {
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////
 */
 
-.arrows {
+#breadcrumbs-four {
+    display: inline-block;
+    text-align: center;
+    overflow: hidden;
+    width: 100%;
+    list-style: none !important;
+}
+
+#breadcrumbs-four li {
+    /* float: left; */
+    display: inline-block;
+    margin: 0 .5em 0 1em;
+}
+
+#breadcrumbs-four a {
+    background: #ddd;
+    padding: .7em 1em;
+    float: left;
+    text-decoration: none;
+    color: #444;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, .5);
+    position: relative;
+}
+
+#breadcrumbs-four a:hover {
+    background: #efc9ab;
+}
+
+#breadcrumbs-four a::before,
+#breadcrumbs-four a::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 1em;
+    background: #ddd;
+    transform: skew(-10deg);
+}
+
+#breadcrumbs-four a::before {
+    left: -.5em;
+    border-radius: 5px 0 0 5px;
+}
+
+#breadcrumbs-four a:hover::before {
+    background: #efc9ab;
+}
+
+#breadcrumbs-four a::after {
+    right: -.5em;
+    border-radius: 0 5px 5px 0;
+}
+
+#breadcrumbs-four a:hover::after {
+    background: #efc9ab;
+}
+
+#breadcrumbs-four .current,
+#breadcrumbs-four .current:hover {
+    font-weight: bold;
+    background: none;
+}
+
+#breadcrumbs-four .current::after,
+#breadcrumbs-four .current::before {
+    content: normal;
+}
+
+
+/* .arrows {
     white-space: nowrap;
 }
 
@@ -81,26 +150,6 @@ footer>p {
     margin: 0 9px 0 -10px;
     padding: 0 20px;
     position: relative;
-}
-
-.arrows li::before,
-.arrows li::after {
-    border-right: 1px solid #666666;
-    content: '';
-    display: block;
-    height: 50%;
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    z-index: -1;
-    transform: skewX(45deg);
-}
-
-.arrows li::after {
-    bottom: 0;
-    top: auto;
-    transform: skewX(-45deg);
 }
 
 .arrows li:last-of-type::before,
@@ -129,6 +178,10 @@ footer>p {
 .arrows li:nth-of-type(4) a {
     color: hsl(0, 0%, 45%);
 }
+
+.arrows li:nth-of-type(5) a {
+    color: hsl(0, 0%, 35%);
+} */
 
 
 /*
@@ -262,11 +315,7 @@ footer>p {
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////
 */
 
-#residence {
-    /* display: none; */
-    /* align-self: end; */
-    /* background-color: blueviolet; */
-}
+#residence {}
 
 
 /*
@@ -293,7 +342,7 @@ footer>p {
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////
 */
 
-#others {}
+#other {}
 
 
 /*
@@ -380,7 +429,7 @@ footer>p {
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////
     */
     #section-header-personal {
-        background-color: yellow;
+        /* background-color: yellow; */
     }
     .form-section-personal {
         display: grid;
@@ -436,7 +485,12 @@ footer>p {
     //   Section Headers H3  
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////
     */
-    .form-section-headers {}
+    .form-section-header-main {
+        background-color: orangered;
+    }
+    .form-section-header {
+        /* display: none; */
+    }
     /*
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////
     //   Personal Section 
@@ -446,7 +500,19 @@ footer>p {
         height: 100%;
     }
     #section-header-personal {
-        background-color: orangered;
+        /*
+        background-color: orangered; 
+        */
+    }
+    #residence,
+    #income,
+    #other,
+    #references,
+    #signatures {
+        /*
+            This could be changed to display hidden
+        */
+        display: none;
     }
 }
 
