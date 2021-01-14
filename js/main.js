@@ -60,3 +60,25 @@ const btnGroupFragment = (dataArray) => {
 
     return fragment;
 }
+
+
+/*
+    Function : checkWindowWidth
+    Description : uses the window object to retrieve the windows width,
+                  we later use this data to decide if we'll create the form
+                  in as an accordian or singel page.
+*/
+
+const checkWindowWidth = () => {
+    const windowSize = $(window).width();
+    if (windowSize >= 900 && accordionObj != null) {
+        // Destroy Accordian
+        accordionObj.accordion("destroy");
+        accordionObj = null;
+    } else if (windowSize < 900 && accordionObj == null) {
+        // Create Accordian
+        accordionObj = accordionObj = $(".form-container").accordion({
+            heightStyle: "fill"
+        });
+    }
+}

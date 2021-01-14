@@ -12,7 +12,6 @@
 
     <link rel="icon" href="https://www.buddyrents.com/media/favicon/default/Buddys.ico" type="image/x-icon">
     <link rel="stylesheet" href="./css/styles.css" />
-    <link rel="stylesheet" href="./css/layouts.css" />
 
 
     <!-- jquery Accoridan -->
@@ -42,140 +41,145 @@
             <h2 class="header-title"> Order Form Application </h2>
         </section>
 
+        <!-- Breadcrumbs navigation menu -->
+        <ol class="arrows">
+            <li><a href="#">Personal</a></li>
+            <li><a href="#">Residence</a></li>
+            <li><a href="#">Income</a></li>
+            <li><a href="#">Other</a></li>
+            <li><a href="#">Signatures</a></li>
+        </ol>
+
         <!-- <section id="form-section"> -->
         <form class="form-container">
-            <div id="accordion">
 
-                <!-- Personal Form -->
-                <h3 id="section-header-personal"> Personal </h3>
-                <section id="personal">
-                    <div class="form-section-personal">
-                        <div class="label-input-pair">
-                            <label for="fname"> Full Name </label>
-                            <input type="text" name="fname" placeholder="Full Name">
-                        </div>
-
-                        <div class="label-input-pair">
-                            <label for="email"> Email </label>
-                            <input type="text" name="email" id="email" placeholder="Email">
-                        </div>
-                        <div class="label-input-pair">
-                            <label for="crntDate"> Today's Date </label>
-                            <input type="date" id="crntDate" name="crntDate" value="2018-07-22" min="2018-01-01" max="2018-12-31">
-                        </div>
-
-                        <fieldset id="license">
-                            <div class="label-input-pair license-pair-number">
-                                <label for="licenseNumber"> License Number </label>
-                                <input type="text" id="licenseNumber" name="licenseNumber" value="2018-07-22" min="2018-01-01" max="2018-12-31">
-                            </div>
-
-                            <div class="label-input-pair license-pair-state">
-                                <label for="licenseState"> State </label>
-                                <select id="licenseState" name="licenseState"></select>
-                            </div>
-
-                            <div class="label-input-pair license-pair-exp">
-                                <label for="expDate"> EXP </label>
-                                <input type="date" id="licenseExp" name="expDate" value="2018-07-22" min="2018-01-01" max="2018-12-31">
-                            </div>
-                        </fieldset>
-
-                        <label class="coApplicantLbl">Add a Co-Applicant ?</label>
-                        <button id="coApplicantBtn"> Add Co-Applicant </button>
+            <!-- Personal Form -->
+            <h3 class="form-section-headers" id="section-header-personal"> Personal </h3>
+            <section id="personal">
+                <div class="form-section-personal">
+                    <div class="label-input-pair">
+                        <label for="fname"> Full Name </label>
+                        <input type="text" name="fname" placeholder="Full Name">
                     </div>
-                </section>
 
+                    <div class="label-input-pair">
+                        <label for="email"> Email </label>
+                        <input type="text" name="email" id="email" placeholder="Email">
+                    </div>
+                    <div class="label-input-pair">
+                        <label for="crntDate"> Today's Date </label>
+                        <input type="date" id="crntDate" name="crntDate" value="2018-07-22" min="2018-01-01" max="2018-12-31">
+                    </div>
 
-                <!-- Residence -->
-                <h3> Residence </h3>
-                <section id="residence">
-                    <!-- residence -->
-                    <input type="text" name="address" id="address">
-                    <input type="text" name="city" id="city">
-                    <select name="state" id="state"></select>
-                    <input type="text" name="zip" id="zip">
-
-                    <select name="state" id="state"></select>
-                </section>
-
-
-                <!-- income -->
-                <h3> Income </h3>
-                <section id="income">
-                    <div>
-                        <input type="text" name="employer" id="employer">
-                        <input type="text" name="empAddress" id="empAddress">
-                        <input type="text" name="jobTitle" id="jobTitle">
-                        <input type="text" name="shift" id="shift">
-                        <input type="date" id="start" name="trip-start" value="2018-07-22" min="2018-01-01" max="2018-12-31">
-                        <input type="text" name="phone" id="phone">
-                        <input type="text" name="extDept" id="extDept">
-                        <input type="text" name="supevisor" id="supervisor">
-                        <div id="otherIncome" class="btn-group">
-                            <!-- Convert this into a label and add a text field next to it -->
+                    <fieldset id="license">
+                        <div class="label-input-pair license-pair-number">
+                            <label for="licenseNumber"> License Number </label>
+                            <input type="text" id="licenseNumber" name="licenseNumber" value="2018-07-22" min="2018-01-01" max="2018-12-31">
                         </div>
 
-                        <div name="payFrequency" class="btn-group"></div>
+                        <div class="label-input-pair license-pair-state">
+                            <label for="licenseState"> State </label>
+                            <select id="licenseState" name="licenseState"></select>
+                        </div>
 
-                        <input type="text" name="payPeriod" id="payPeriod">
-                        <input type="text" name="payDay" id="payDay">
+                        <div class="label-input-pair license-pair-exp">
+                            <label for="expDate"> EXP </label>
+                            <input type="date" id="licenseExp" name="expDate" value="2018-07-22" min="2018-01-01" max="2018-12-31">
+                        </div>
+                    </fieldset>
+
+                    <label class="coApplicantLbl">Add a Co-Applicant ?</label>
+                    <button id="coApplicantBtn"> Add Co-Applicant </button>
+                </div>
+            </section>
+
+
+            <!-- Residence -->
+            <h3 class="form-section-headers"> Residence </h3>
+            <section id="residence">
+                <!-- residence -->
+                <input type="text" name="address" id="address">
+                <input type="text" name="city" id="city">
+                <select name="state" id="state"></select>
+                <input type="text" name="zip" id="zip">
+
+                <select name="state" id="state"></select>
+            </section>
+
+
+            <!-- income -->
+            <h3 class="form-section-headers"> Income </h3>
+            <section id="income">
+                <div>
+                    <input type="text" name="employer" id="employer">
+                    <input type="text" name="empAddress" id="empAddress">
+                    <input type="text" name="jobTitle" id="jobTitle">
+                    <input type="text" name="shift" id="shift">
+                    <input type="date" id="start" name="trip-start" value="2018-07-22" min="2018-01-01" max="2018-12-31">
+                    <input type="text" name="phone" id="phone">
+                    <input type="text" name="extDept" id="extDept">
+                    <input type="text" name="supevisor" id="supervisor">
+                    <div id="otherIncome" class="btn-group">
+                        <!-- Convert this into a label and add a text field next to it -->
                     </div>
-                    <!-- If we can't find a better way just stick the co-applicant here -->
-                </section>
+
+                    <div name="payFrequency" class="btn-group"></div>
+
+                    <input type="text" name="payPeriod" id="payPeriod">
+                    <input type="text" name="payDay" id="payDay">
+                </div>
+                <!-- If we can't find a better way just stick the co-applicant here -->
+            </section>
 
 
-                <!-- references -->
-                <h3> References </h3>
-                <section id="references">
-                    <div>
-                        <fieldset>
-                            <input type="text" name="rName" id="rName">
-                            <input type="text" name="rEmail" id="rEmail">
-                            <input type="text" name="aRelation" id="aRelation">
-                            <input type="text" name="rAddress" id="rAddress">
-                            <input type="text" name="rCity" id="rCity">
-                            <select id="state" name="state"></select>
-                            <input type="text" name="rZip" id="rZip">
-                            <input type="text" name="rPhone" id="rPhone">
-                        </fieldset>
-                    </div>
-                </section>
+            <!-- references -->
+            <h3 class="form-section-headers"> References </h3>
+            <section id="references">
+                <div>
+                    <fieldset>
+                        <input type="text" name="rName" id="rName">
+                        <input type="text" name="rEmail" id="rEmail">
+                        <input type="text" name="aRelation" id="aRelation">
+                        <input type="text" name="rAddress" id="rAddress">
+                        <input type="text" name="rCity" id="rCity">
+                        <select id="state" name="state"></select>
+                        <input type="text" name="rZip" id="rZip">
+                        <input type="text" name="rPhone" id="rPhone">
+                    </fieldset>
+                </div>
+            </section>
 
-                <!-- others -->
-                <h3> Other </h3>
-                <section id="others">
-                    <input type="text" name="vehicleYR" id="vehicleYR">
-                    <input type="text" name="vehicleMK" id="vehicleMK">
-                    <input type="text" name="vehicleML" id="vehicleML">
-                    <input type="text" name="vehicleCL" id="vehicleCL">
-                    <input type="text" name="vehicleTG" id="vehicleTG">
-                    <input type="text" name="vehicleRG" id="vehicleRG">
-                    <input type="text" name="vehicleFN" id="vehicleFN">
+            <!-- others -->
+            <h3 class="form-section-headers"> Other </h3>
+            <section id="others">
+                <input type="text" name="vehicleYR" id="vehicleYR">
+                <input type="text" name="vehicleMK" id="vehicleMK">
+                <input type="text" name="vehicleML" id="vehicleML">
+                <input type="text" name="vehicleCL" id="vehicleCL">
+                <input type="text" name="vehicleTG" id="vehicleTG">
+                <input type="text" name="vehicleRG" id="vehicleRG">
+                <input type="text" name="vehicleFN" id="vehicleFN">
 
-                    <!-- A Place we can put the Initials or can this be placed in the signing area?-->
-                    <input type="checkbox" name="subscribe" id="subscribe">
-                    <input type="text" name="vehicleFN" id="vehicleFN">
-                </section>
+                <!-- A Place we can put the Initials or can this be placed in the signing area?-->
+                <input type="checkbox" name="subscribe" id="subscribe">
+                <input type="text" name="vehicleFN" id="vehicleFN">
+            </section>
 
-                <!-- Signatures -->
-                <h3> Signatures </h3>
-                <section id="signatures">
-                    <!-- signatures -->
-                    <input type="text" name="asd" id="asd">
-                    <input type="text" name="sdf" id="asd">
-                </section>
-
-
-            </div>
+            <!-- Signatures -->
+            <h3 class="form-section-headers"> Signatures </h3>
+            <section id="signatures">
+                <!-- signatures -->
+                <input type="text" name="asd" id="asd">
+                <input type="text" name="sdf" id="asd">
+            </section>
 
         </form>
-        <footer>
-            <p> Buddy's Home Furnishings Copyright &#169; 2020 - Call Free: 1-866-779-5058 </p>
-        </footer>
         <!-- </section> -->
-
     </div>
+
+    <footer>
+        <p> Buddy's Home Furnishings Copyright &#169; 2020 - Call Free: 1-866-779-5058 </p>
+    </footer>
 </body>
 
 
@@ -190,44 +194,41 @@
 </html>
 
 <script>
-    $(function() {
-        $("#accordion").accordion();
-    });
+    let accordionObj = null;
+
+    window.addEventListener('resize', (event) => {
+
+        // On the change of the window, check the size to 
+        // see if we need to change layout of the window
+        checkWindowWidth();
+
+    }, true);
+
 
     window.addEventListener('load', (event) => {
+
+        // On load check the window size we're currently working
+        // with, and create the accordion if needed.
+        checkWindowWidth();
+
         // Get a list of state options
         let stateOptionsFragment = selectFragment(stateAbbreviations);
         let dayOptionsFragment = selectFragment(daysArray);
-        let otherIncomeFragment = btnGroupFragment(otherIncomeArray);
-        let payFrequencyFragment = btnGroupFragment(payFrequencyArray);
-
+        // let otherIncomeFragment = btnGroupFragment(otherIncomeArray);
+        // let payFrequencyFragment = btnGroupFragment(payFrequencyArray);
 
 
         // retrieve the select element for the state elements
-        // const stateFieldSet = document.getElementById('licenseState');
-        // Append a copy of it
-        // stateFieldSet.appendChild(stateOptionsFragment.cloneNode(true));
+        const stateFieldSet = document.getElementById('licenseState');
+        // Append a clone
+        stateFieldSet.appendChild(stateOptionsFragment.cloneNode(true));
 
         // const otherIncomeBtnGroup = document.getElementById('otherIncome');
         // otherIncomeBtnGroup.appendChild(otherIncomeFragment.cloneNode(true));
 
 
         /*Testing*/
-        inputTemplate();
-
-
-
-        /*
-
-        <section class="form-section-base" id="signatures">
-            <div id="signatures-section-banner" class="section-banner"> Signatures </div>
-            <!-- signatures -->
-
-        </section>
-        
-        */
-
-
+        // inputTemplate();
 
     });
 </script>
