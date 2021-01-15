@@ -77,7 +77,7 @@ const checkWindowWidth = () => {
         accordionObj = null;
     } else if (windowSize < 900 && accordionObj == null) {
         // Create Accordian
-        accordionObj = accordionObj = $(".form-container").accordion({
+        accordionObj = accordionObj = $("form").accordion({
             heightStyle: "fill"
         });
     }

@@ -10,8 +10,8 @@
     <script src="./js/main.js"></script>
     <script src="./js/data.js"></script>
 
-    <link rel="icon" href="https://www.buddyrents.com/media/favicon/default/Buddys.ico" type="image/x-icon">
-    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="icon" href="./img/icon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./css/index.css" />
 
 
     <!-- jquery Accoridan -->
@@ -32,17 +32,17 @@
 <body>
 
     <div class="grid-container">
-        <section id="header">
+        <section class="header">
             <!-- Company Logo -->
             <div class="header-logo">
-                <img src="./img/BHF_Logo.png" alt="Company Logo">
+                <img src="./img/BHF_Logo.png" alt="Company Logo" width="300px" height="200px">
             </div>
 
             <h2 class="header-title"> Order Form Application </h2>
         </section>
 
         <!-- Breadcrumbs navigation menu -->
-        <ol id="breadcrumbs-four">
+        <ol class="arrows" id="breadcrumbs">
             <li><a href="#">Personal</a></li>
             <li><a href="#">Residence</a></li>
             <li><a href="#">Income</a></li>
@@ -51,12 +51,11 @@
         </ol>
 
         <!-- <section id="form-section"> -->
-        <form class="form-container">
-
+        <form>
             <!-- Personal Form -->
-            <h3 class="form-section-header-main" id="section-header-personal"> Personal </h3>
-            <section id="personal">
-                <div class="form-section-personal">
+            <h3 class="form-section-header form-section-header-personal" id="section-header-personal"> Personal <span class="exclamation-point">&#33;</span></h3>
+            <section class="form-section-body" id="personal">
+                <div class="form-section-body-personal">
                     <div class="label-input-pair">
                         <label for="fname"> Full Name </label>
                         <input type="text" name="fname" placeholder="Full Name">
@@ -71,7 +70,7 @@
                         <input type="date" id="crntDate" name="crntDate" value="2018-07-22" min="2018-01-01" max="2018-12-31">
                     </div>
 
-                    <fieldset id="license">
+                    <fieldset class="license" id="license">
                         <div class="label-input-pair license-pair-number">
                             <label for="licenseNumber"> License Number </label>
                             <input type="text" id="licenseNumber" name="licenseNumber" value="2018-07-22" min="2018-01-01" max="2018-12-31">
@@ -91,12 +90,12 @@
                     <label class="coApplicantLbl">Add a Co-Applicant ?</label>
                     <button id="coApplicantBtn"> Add Co-Applicant </button>
                 </div>
-                <button class="next-button" value="residence"> Next </button>
+                <button class="next-button" id="nxtBtn" value="residence"> Next </button>
             </section>
 
 
             <!-- Residence -->
-            <h3 class="form-section-header" id="section-header-residence"> Residence </h3>
+            <h3 class="form-section-header form-section-header-residence" id="section-header-residence"> Residence </h3>
             <section id="residence">
                 <!-- residence -->
                 <input type="text" name="address" id="address">
@@ -109,7 +108,7 @@
 
 
             <!-- income -->
-            <h3 class="form-section-header" id="section-header-income"> Income </h3>
+            <h3 class="form-section-header form-section-header-income" id="section-header-income"> Income </h3>
             <section id="income">
                 <div>
                     <input type="text" name="employer" id="employer">
@@ -134,7 +133,7 @@
 
 
             <!-- references -->
-            <h3 class="form-section-header" id="section-header-references"> References </h3>
+            <h3 class="form-section-header form-section-header-references" id="section-header-references"> References </h3>
             <section id="references">
                 <div>
                     <fieldset>
@@ -151,7 +150,7 @@
             </section>
 
             <!-- others -->
-            <h3 class="form-section-header" id="section-header-other"> Other </h3>
+            <h3 class="form-section-header form-section-header-other" id="section-header-other"> Other </h3>
             <section id="other">
                 <input type="text" name="vehicleYR" id="vehicleYR">
                 <input type="text" name="vehicleMK" id="vehicleMK">
@@ -167,7 +166,7 @@
             </section>
 
             <!-- Signatures -->
-            <h3 class="form-section-header" id="section-header-signatures"> Signatures </h3>
+            <h3 class="form-section-header form-section-header-signatures" id="section-header-signatures"> Signatures </h3>
             <section id="signatures">
                 <!-- signatures -->
                 <input type="text" name="asd" id="asd">
@@ -205,6 +204,28 @@
 
     }, true);
 
+    document.getElementById("nxtBtn").addEventListener("click", function() {
+        switch (this.value) {
+            case 'personal':
+                console.log(this.value);
+                break;
+            case 'residence':
+                console.log(this.value);
+                break;
+            case 'residence':
+                console.log(this.value);
+                break;
+            case 'residence':
+                console.log(this.value);
+                break;
+            case 'residence':
+                console.log(this.value);
+                break;
+            default:
+                console.log("Was not able to coordinate to a section");
+                break;
+        }
+    });
 
     window.addEventListener('load', (event) => {
 
