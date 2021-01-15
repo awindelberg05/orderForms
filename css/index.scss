@@ -78,6 +78,13 @@ footer {
     height: 100vh;
     overflow: scroll;
     background-color: $color-background;
+    // Width < 600px
+    @media screen and (max-width: $bp-phone) and (min-width: $bp-phone) {
+        grid-template-rows: minmax(30px, .20fr) 1fr;
+    }
+    @media (min-width: $bp-tablet) {
+        grid-template-rows: minmax(120px, .20fr) .10fr 1fr;
+    }
 }
 
 
