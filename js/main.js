@@ -82,3 +82,42 @@ const checkWindowWidth = () => {
         });
     }
 }
+
+
+/*
+    Function : changeSection
+    Description : Accepts an event button element and uses the preset data fields and
+                  values to set the new section visiable and the current section to hidden
+*/
+
+const changeSection = (element) => {
+    document.getElementById('section-header-' + element.value).style.display = "none";
+    document.getElementById(element.value).style.display = "none";
+    document.getElementById('section-header-' + element.dataset.target).style.display = "block";
+    document.getElementById(element.dataset.target).style.display = "block";
+}
+
+
+const tempHolder = () => {
+    /*
+        If the event was a button press check the button
+    */
+    switch (isButton.value) {
+        case 'personal':
+            console.log("Personal");
+            break;
+        case 'residence':
+            break;
+        case 'income':
+            break;
+        case 'references':
+            break;
+        case 'other':
+            break;
+        case 'signatures':
+            break;
+        default:
+            console.log("Was not able to coordinate to a section");
+            break;
+    }
+}

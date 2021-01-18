@@ -17,11 +17,19 @@ $color-background: #f5f5f5;
 $bp-phone: 600px;
 $bp-tablet: 900px;
 $bp-laptop: 1200px;
+html {
+    font-size: 16px;
+    /* 24 ÷ 16 = 1.5 */
+    // @media screen and (min-width: 320px) {
+    //     & {
+    //         font-size: calc(16px + 6 * ((100vw - 320px) / 680));
+    //     }
+    // }
+}
+
 body {
     height: 100vh;
     margin: 0;
-    font-size: 16px;
-    /* 24 ÷ 16 = 1.5 */
     font-family: $font-stack;
     font-style: 1.1em;
     text-align: center;
@@ -49,9 +57,30 @@ h3 {
     padding-left: 2rem !important;
 }
 
+h2,
+h3 {
+    @media screen and (max-width: $bp-phone) {
+        font-size: 2rem !important; //4.5vw
+    }
+}
+
 form {
     // 900px
     overflow: hidden;
+}
+
+legend {
+    background-color: $color-5;
+    color: $color-background;
+    padding: 3px 6px;
+    border-radius: 30px;
+}
+
+fieldset {
+    // margin: 1rem !important;
+    // padding: 1rem !important;
+    border: solid 2px $color-5 !important;
+    border-radius: 30px;
 }
 
 footer {
@@ -95,6 +124,7 @@ footer {
 */
 
 .arrows {
+    align-self: center;
     white-space: nowrap;
     li {
         display: inline-block;
@@ -135,11 +165,20 @@ footer {
             &:focus {
                 color: #f44336;
             }
+            &.current {
+                color: #f44336;
+            }
         }
         /*Testing*/
         a {
             position: relative;
         }
+    }
+    @media screen and (max-width: $bp-tablet) {
+        display: none;
+    }
+    @media screen and (min-width: $bp-laptop) {
+        display: block;
     }
 }
 
@@ -153,6 +192,20 @@ footer {
 .label-input-pair {
     float: left;
     margin-right: 20px;
+}
+
+
+/*
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+//   Next/Previous Buttons (Desktop Section 
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+*/
+
+.form-section-button {
+    display: none;
+    @media screen and (min-width: $bp-tablet) {
+        display: initial;
+    }
 }
 
 
@@ -276,18 +329,33 @@ footer {
         }
         &-residence {
             background-color: $color-3;
+            @media (min-width: $bp-tablet) {
+                display: none;
+            }
         }
         &-income {
             background-color: $color-4;
+            @media (min-width: $bp-tablet) {
+                display: none;
+            }
         }
         &-references {
             background-color: $color-5;
+            @media (min-width: $bp-tablet) {
+                display: none;
+            }
         }
         &-other {
             background-color: $color-6;
+            @media (min-width: $bp-tablet) {
+                display: none;
+            }
         }
         &-signatures {
             background-color: $color-7;
+            @media (min-width: $bp-tablet) {
+                display: none;
+            }
         }
     }
     /*
@@ -295,9 +363,26 @@ footer {
     */
     &-body {
         &-personal {
-            border: 1px solid #f44336;
-            /* align-items: center;
-            padding: 1rem;*/
+            align-items: center;
+            padding: 1rem;
+            /*
+            ///////////////////////////////////////////////////////////////////////////////////////////////////////////
+            //                      Media Query for Devices 600 or more
+            ///////////////////////////////////////////////////////////////////////////////////////////////////////////
+            */
+            @media screen and (max-width: $bp-phone) {
+                display: grid;
+                grid-template-rows: repeat(6, 1fr);
+                margin: 0 auto;
+            }
+            @media screen and (min-width: $bp-phone) {
+                display: grid;
+                grid-template-rows: repeat(2, 15%) 1fr 1fr;
+                grid-template-columns: repeat(2, 1fr);
+                margin: 1rem;
+                border: 2px solid #f44336;
+                border-radius: 30px;
+            }
         }
     }
 }
@@ -333,39 +418,6 @@ footer {
 /*
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////
-//                      Media Query for Devices 600 or less 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////////////////////////////////
-*/
-
-@media screen and (max-width: $bp-phone) {
-    h2,
-    h3 {
-        font-size: 4.5vw !important;
-    }
-    .arrows {
-        display: none;
-    }
-    /*
-    ///////////////////////////////////////////////////////////////////////////////////////////////////////////
-    //   Personal Section
-    ///////////////////////////////////////////////////////////////////////////////////////////////////////////
-    */
-    #section-header-personal {
-        background-color: rebeccapurple;
-    }
-    .form-section-body-personal {
-        display: grid;
-        grid-template-rows: repeat(6, 1fr);
-        margin: 0 auto;
-        padding: 1rem;
-    }
-}
-
-
-/*
-///////////////////////////////////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////////////////////////////////
 //                      Media Query for Devices 600 or higher
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -377,10 +429,7 @@ footer {
 @media screen and (min-width: $bp-phone) {
     h2,
     h3 {
-        font-size: 4.5vw !important;
-    }
-    .arrows {
-        display: none;
+        font-size: 2.5rem !important; //4.5vw
     }
     /*
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -397,13 +446,6 @@ footer {
     //   Personal Section 
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////
     */
-    .form-section-personal {
-        display: grid;
-        grid-template-rows: repeat(3, 1fr);
-        grid-template-columns: repeat(2, 1fr);
-        margin: 1rem;
-        padding: 1rem;
-    }
     #coApplicantBtn {
         /*
             TODO : Make the button float to the right
@@ -434,9 +476,6 @@ footer {
     }
     h3 {
         font-size: 2.5rem !important;
-    }
-    .arrows {
-        display: block;
     }
     /*
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -482,9 +521,6 @@ footer {
             This could be changed to display hidden
         */
         display: none;
-    }
-    #nxtBtn {
-        display: visible;
     }
 }
 

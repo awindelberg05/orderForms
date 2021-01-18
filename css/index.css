@@ -4,11 +4,14 @@
 //    Variables
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////
 */
+html {
+  font-size: 16px;
+  /* 24 ÷ 16 = 1.5 */
+}
+
 body {
   height: 100vh;
   margin: 0;
-  font-size: 16px;
-  /* 24 ÷ 16 = 1.5 */
   font-family: Helvetica, sans-serif;
   font-style: 1.1em;
   text-align: center;
@@ -36,8 +39,27 @@ h3 {
   padding-left: 2rem !important;
 }
 
+@media screen and (max-width: 600px) {
+  h2,
+h3 {
+    font-size: 2rem !important;
+  }
+}
+
 form {
   overflow: hidden;
+}
+
+legend {
+  background-color: #28b4c8;
+  color: #f5f5f5;
+  padding: 3px 6px;
+  border-radius: 30px;
+}
+
+fieldset {
+  border: solid 2px #28b4c8 !important;
+  border-radius: 30px;
 }
 
 footer {
@@ -80,6 +102,7 @@ footer p {
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////
 */
 .arrows {
+  align-self: center;
   white-space: nowrap;
 }
 .arrows li {
@@ -123,8 +146,21 @@ footer p {
 .arrows li a:focus {
   color: #f44336;
 }
+.arrows li a.current {
+  color: #f44336;
+}
 .arrows li a {
   position: relative;
+}
+@media screen and (max-width: 900px) {
+  .arrows {
+    display: none;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .arrows {
+    display: block;
+  }
 }
 
 /*
@@ -135,6 +171,20 @@ footer p {
 .label-input-pair {
   float: left;
   margin-right: 20px;
+}
+
+/*
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+//   Next/Previous Buttons (Desktop Section 
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+*/
+.form-section-button {
+  display: none;
+}
+@media screen and (min-width: 900px) {
+  .form-section-button {
+    display: initial;
+  }
 }
 
 /*
@@ -252,22 +302,68 @@ footer p {
 .form-section-header-residence {
   background-color: #ffd246;
 }
+@media (min-width: 900px) {
+  .form-section-header-residence {
+    display: none;
+  }
+}
 .form-section-header-income {
   background-color: #78d237;
+}
+@media (min-width: 900px) {
+  .form-section-header-income {
+    display: none;
+  }
 }
 .form-section-header-references {
   background-color: #28b4c8;
 }
+@media (min-width: 900px) {
+  .form-section-header-references {
+    display: none;
+  }
+}
 .form-section-header-other {
   background-color: #2d73f5;
+}
+@media (min-width: 900px) {
+  .form-section-header-other {
+    display: none;
+  }
 }
 .form-section-header-signatures {
   background-color: #aa46be;
 }
+@media (min-width: 900px) {
+  .form-section-header-signatures {
+    display: none;
+  }
+}
 .form-section-body-personal {
-  border: 1px solid #f44336;
-  /* align-items: center;
-  padding: 1rem;*/
+  align-items: center;
+  padding: 1rem;
+  /*
+  ///////////////////////////////////////////////////////////////////////////////////////////////////////////
+  //                      Media Query for Devices 600 or more
+  ///////////////////////////////////////////////////////////////////////////////////////////////////////////
+  */
+}
+@media screen and (max-width: 600px) {
+  .form-section-body-personal {
+    display: grid;
+    grid-template-rows: repeat(6, 1fr);
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width: 600px) {
+  .form-section-body-personal {
+    display: grid;
+    grid-template-rows: repeat(2, 15%) 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 1rem;
+    border: 2px solid #f44336;
+    border-radius: 30px;
+  }
 }
 
 /*
@@ -296,39 +392,6 @@ footer p {
 /*
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////
-//                      Media Query for Devices 600 or less 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////////////////////////////////
-*/
-@media screen and (max-width: 600px) {
-  h2,
-h3 {
-    font-size: 4.5vw !important;
-  }
-
-  .arrows {
-    display: none;
-  }
-
-  /*
-  ///////////////////////////////////////////////////////////////////////////////////////////////////////////
-  //   Personal Section
-  ///////////////////////////////////////////////////////////////////////////////////////////////////////////
-  */
-  #section-header-personal {
-    background-color: rebeccapurple;
-  }
-
-  .form-section-body-personal {
-    display: grid;
-    grid-template-rows: repeat(6, 1fr);
-    margin: 0 auto;
-    padding: 1rem;
-  }
-}
-/*
-///////////////////////////////////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////////////////////////////////
 //                      Media Query for Devices 600 or higher
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -337,11 +400,7 @@ h3 {
 @media screen and (min-width: 600px) {
   h2,
 h3 {
-    font-size: 4.5vw !important;
-  }
-
-  .arrows {
-    display: none;
+    font-size: 2.5rem !important;
   }
 
   /*
@@ -360,14 +419,6 @@ label {
   //   Personal Section 
   ///////////////////////////////////////////////////////////////////////////////////////////////////////////
   */
-  .form-section-personal {
-    display: grid;
-    grid-template-rows: repeat(3, 1fr);
-    grid-template-columns: repeat(2, 1fr);
-    margin: 1rem;
-    padding: 1rem;
-  }
-
   #coApplicantBtn {
     /*
         TODO : Make the button float to the right
@@ -395,10 +446,6 @@ label {
 
   h3 {
     font-size: 2.5rem !important;
-  }
-
-  .arrows {
-    display: block;
   }
 
   /*
@@ -451,10 +498,6 @@ label {
         This could be changed to display hidden
     */
     display: none;
-  }
-
-  #nxtBtn {
-    display: visible;
   }
 }
 /*
