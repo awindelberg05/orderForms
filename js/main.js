@@ -91,10 +91,32 @@ const checkWindowWidth = () => {
 */
 
 const changeSection = (element) => {
+
     document.getElementById('section-header-' + element.value).style.display = "none";
     document.getElementById(element.value).style.display = "none";
     document.getElementById('section-header-' + element.dataset.target).style.display = "block";
     document.getElementById(element.dataset.target).style.display = "block";
+
+    console.log("This is the element target :");
+    console.log(element.dataset.target);
+
+    if (element.dataset.target === 'signatures') {
+        applyDatetoLabel('crntDate');
+    }
+
+}
+
+const updateActiveBreadcrumb = (newActive) => {
+    const crntBreadcrumb = document.getElementsByClassName('crntActiveBC');
+    crntBreadcrumb[0].className = "";
+    /* Update the next breadCrumb*/
+    const newActiveBreadcrumb = document.getElementById('bc' + newActive.charAt(0).toUpperCase() + newActive.slice(1));
+    newActiveBreadcrumb.className = 'crntActiveBC';
+}
+
+const applyDatetoLabel = (elem) => {
+    let dateInfo = new Date();
+    document.getElementById(elem).innerHTML = dateInfo.getMonth() + 1 + "/" + dateInfo.getDate() + "/" + dateInfo.getFullYear();
 }
 
 

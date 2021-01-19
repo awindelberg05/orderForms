@@ -41,39 +41,44 @@
         </section>
         <!-- Breadcrumbs navigation menu -->
         <ol class="arrows" id="breadcrumbs">
-            <li><a class="current" href="#">Personal</a></li>
-            <li><a href="#">Residence</a></li>
-            <li><a href="#">Income</a></li>
-            <li><a href="#">References</a></li>
-            <li><a href="#">Other</a></li>
-            <li><a href="#">Signatures</a></li>
+            <li><a id="bcPersonal" class="crntActiveBC" data-target="personal">Personal</a></li>
+            <li><a id="bcResidence" data-target="residence">Residence</a></li>
+            <li><a id="bcIncome" data-target="income">Income</a></li>
+            <li><a id="bcReferences" data-target="references">References</a></li>
+            <li><a id="bcOther" data-target="other">Other</a></li>
+            <li><a id="bcSignatures" data-target="signatures">Signatures</a></li>
         </ol>
         <!-- <section id="form-section"> -->
-        <form id="applicationForm">
+        <form id="applicationForm" method="POST">
             <!-- Personal Form -->
             <h3 class="form-section-header form-section-header-personal" id="section-header-personal"> Personal <span class="exclamation-point">&#33;</span></h3>
             <section class="form-section-body" id="personal">
                 <div class="form-section-body-personal">
-                    <div class="label-input-pair">
-                        <label for="fname"> Full Name </label>
+
+                    <div id="crntDate" class="label-input-pair form-section-body-date p-crntDate">
+                    </div>
+
+                    <div class="label-input-pair p-fname">
+                        <label for="fname"> First Name </label>
                         <input type="text" name="fname" placeholder="Full Name">
                     </div>
 
-                    <div class="label-input-pair">
+                    <div class="label-input-pair p-lname">
+                        <label for="lname"> Last Name </label>
+                        <input type="text" name="lname" placeholder="Full Name">
+                    </div>
+
+                    <div class="label-input-pair p-email">
                         <label for="email"> Email </label>
                         <input type="text" name="email" id="email" placeholder="Email">
                     </div>
-                    <div class="label-input-pair">
-                        <label for="crntDate"> Today's Date </label>
-                        <input type="date" id="crntDate" name="crntDate" value="2018-07-22" min="2018-01-01" max="2018-12-31">
-                    </div>
 
-                    <div class="label-input-pair">
+                    <div class="label-input-pair p-phone">
                         <label for="phoneNumber"> Phone # </label>
                         <input type="text" name="phoneNumber" placeholder="Phone Number">
                     </div>
 
-                    <fieldset class="license" id="license">
+                    <fieldset class="p-license" id="license">
                         <div class="label-input-pair license-pair-number">
                             <label for="licenseNumber"> License Number </label>
                             <input type="text" id="licenseNumber" name="licenseNumber" value="2018-07-22" min="2018-01-01" max="2018-12-31">
@@ -90,8 +95,10 @@
                         </div>
                     </fieldset>
 
-                    <label class="coApplicantLbl">Add a Co-Applicant ?</label>
-                    <button id="coApplicantBtn"> Add Co-Applicant </button>
+                    <div class="label-input-pair p-co-applicant">
+                        <label class="coApplicantLbl">Add a Co-Applicant ?</label>
+                        <button id="coApplicantBtn"> Add Co-Applicant </button>
+                    </div>
                 </div>
                 <button type="button" class="form-section-button" id="nxtBtn" value="personal" data-target="residence"> Next </button>
             </section>
@@ -222,7 +229,6 @@
 
                 </div>
                 <!-- If we can't find a better way just stick the co-applicant here -->
-
                 <button type="button" class="form-section-button" id="prvBtnIncome" value="income" data-target="residence"> Previous </button>
                 <button type="button" class="form-section-button" id="nxtBtnIncome" value="income" data-target="references"> Next </button>
             </section>
@@ -332,8 +338,22 @@
             <h3 class="form-section-header form-section-header-signatures" id="section-header-signatures"> Signatures </h3>
             <section id="signatures">
                 <!-- signatures -->
-                <input type="text" name="asd" id="asd">
-                <input type="text" name="sdf" id="asd">
+                <div class="label-input-pair">
+                    <label for="applicantName">Applicant Name</label>
+                    <!-- A Place we can put the Initials or can this be placed in the signing area?-->
+                    <input type="text" name="sdf" id="asd">
+                </div>
+                <div class="label-input-pair">
+                    <label id="crntDate"></label>
+                    <!-- A Place we can put the Initials or can this be placed in the signing area?-->
+                    <input type="text" name="sdf" id="asd">
+                </div>
+
+                <div class="label-input-pair">
+                    <label for="applicantSS">Applicant Social Security</label>
+                    <!-- A Place we can put the Initials or can this be placed in the signing area?-->
+                    <input type="text" name="asd" id="asd">
+                </div>
 
                 <button type="button" class="form-section-button" id="prvBtnSignatures" value="signatures" data-target="other"> Previous </button>
                 <button class="form-section-button" id="submit" value="submit" data-target="submit"> Submit </button>
@@ -360,6 +380,8 @@
 <script>
     let accordionObj = null;
     const myForm = document.getElementById("applicationForm");
+    const myBreadcrumbs = document.getElementById("breadcrumbs");
+    let currentActiveSection = "personal";
 
     window.addEventListener('resize', (event) => {
 
@@ -369,12 +391,33 @@
 
     }, true);
 
+    myBreadcrumbs.addEventListener("click", (event) => {
+        const bCrumbClicked = event.target;
+
+        if (bCrumbClicked.nodeName === 'A') {
+            console.log("This is the BreadCrumb value : ");
+            bCrumbClicked.value = currentActiveSection;
+            changeSection(bCrumbClicked);
+            /* Update the Current Section */
+            currentActiveSection = bCrumbClicked.dataset.target;
+            /* Update the bread crumbs*/
+            updateActiveBreadcrumb(currentActiveSection);
+
+        } else {
+            return;
+        }
+    });
+
     myForm.addEventListener("click", (event) => {
 
         const isButton = event.target;
 
         if (isButton.nodeName === 'BUTTON') {
             changeSection(isButton);
+            /* Update the Current Section */
+            currentActiveSection = isButton.dataset.target;
+            /* Update the bread crumbs*/
+            updateActiveBreadcrumb(currentActiveSection);
             return false;
         } else {
             return;
@@ -386,6 +429,9 @@
         // On load check the window size we're currently working
         // with, and create the accordion if needed.
         checkWindowWidth();
+
+        // apply the current date to date field
+        applyDatetoLabel('crntDate');
 
         // Get a list of state options
         let stateOptionsFragment = selectFragment(stateAbbreviations);
@@ -401,7 +447,6 @@
 
         // const otherIncomeBtnGroup = document.getElementById('otherIncome');
         // otherIncomeBtnGroup.appendChild(otherIncomeFragment.cloneNode(true));
-
 
         /*Testing*/
         // inputTemplate();
