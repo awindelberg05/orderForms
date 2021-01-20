@@ -6,13 +6,25 @@
 
 .label-input-pair {
     float: left;
-    margin-right: 20px;
-}
-
-@media screen and (min-width: $bp-phone) {
-    input,
-    label {
+    padding-top: 2%;
+    font-size: 1.4rem;
+    &>label {
         display: block;
+        height: 50%;
         text-align: left;
+        padding-top: 1rem;
+        margin-right: 3%;
+    }
+    &>input {
+        width: 75%;
+    }
+    &>select {
+        height: 50%;
+        margin: 5% auto;
+    }
+    @media screen and (min-width: $bp-phone) {}
+    @media screen and (min-width: $bp-tablet) {
+        display: grid;
+        grid-template-columns: .25fr 1fr;
     }
 }
