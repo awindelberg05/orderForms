@@ -1,0 +1,31 @@
+/*
+/////////////////////////////////////////////////////////////////////////////
+//    Exclamation Point Icon 
+/////////////////////////////////////////////////////////////////////////////
+*/
+
+.exclamation-point {
+    border: solid 1px;
+    color: red;
+    display: inline-block;
+    border-radius: 50%;
+    width: 2.6rem;
+    height: 2.6rem;
+    text-align: center;
+    p {
+        margin: 0;
+        padding: 0;
+    }
+}
+
+
+/*
+    This is simply still in test so turning it off until
+    on anything lower than tablet size
+*/
+
+@media (min-width: $bp-tablet) {
+    .exclamation-point {
+        display: none;
+    }
+}

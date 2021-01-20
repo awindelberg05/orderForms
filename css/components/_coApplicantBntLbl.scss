@@ -1,0 +1,19 @@
+/* Small devices (tablets, 600px and up) */
+
+@media screen and (min-width: $bp-phone) {
+    /*
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////
+    //   Personal Section 
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////
+    */
+    #coApplicantBtn {
+        /*
+            TODO : Make the button float to the right
+        */
+        width: 8rem;
+    }
+    .coApplicantLbl {
+        font-size: large;
+        align-self: center;
+    }
+}

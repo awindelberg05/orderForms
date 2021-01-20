@@ -1,0 +1,35 @@
+/*
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+//    Input Text Boxes
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+*/
+
+input {
+    border-bottom-color: #444444;
+    border-radius: 0;
+    display: block;
+    line-height: 0;
+    margin-top: 0.5em;
+    margin-bottom: 1.5em;
+    padding: 0.85em 0.75em 0.75em 0.75em;
+    width: calc(100% - 1.25em);
+    transition: map-get($transition, speed-fast) border-color map-get($transition, easing);
+    // States
+    &:focus {
+        box-shadow: 0 0 0 3px white, 0 0 0 6px blue;
+        outline: none;
+    }
+    &:hover {
+        background-color: darken( blue, 7%);
+        border-color: darken(blue, 14%);
+        text-decoration: underline;
+    }
+    &:active {
+        background-color: darken(blue, 21%);
+        border-color: darken( blue, 28%);
+        position: relative;
+        top: 1px;
+        text-decoration: none;
+        transition: none;
+    }
+}

@@ -1,0 +1,20 @@
+/*
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+//    Grid Container
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+*/
+
+.grid-container {
+    display: grid;
+    /* grid-template-rows: minmax(120px, 4vh) 1fr; */
+    height: 100vh;
+    background-color: $color-background;
+    // Width < 600px
+    @media screen and (max-width: $bp-phone) and (min-width: $bp-phone) {
+        overflow-y: scroll;
+        grid-template-rows: minmax(30px, .20fr) 1fr;
+    }
+    @media (min-width: $bp-tablet) {
+        grid-template-rows: minmax(120px, .20fr) .10fr 1fr;
+    }
+}

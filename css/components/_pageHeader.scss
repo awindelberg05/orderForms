@@ -1,0 +1,32 @@
+/*
+/////////////////////////////////////////////////////////////////////////////
+//    Page Header
+/////////////////////////////////////////////////////////////////////////////
+*/
+
+.header {
+    display: grid;
+    grid-template-columns: 1.25fr 1.75fr;
+    background-color: $color-1;
+    &-logo {
+        display: block;
+        align-self: center;
+        margin: 1rem;
+    }
+    &-title {
+        display: grid;
+        align-items: center;
+        padding: .5rem;
+    }
+    /*
+    TODO : The image is a little large on anything with a
+           width of 700px, maybe make a media query to make
+           image stay in better quality
+    */
+    &-logo>img {
+        float: left;
+        max-width: 100%;
+        width: auto;
+        height: auto;
+    }
+}

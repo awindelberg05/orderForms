@@ -1,0 +1,133 @@
+/*
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+//   Form Section
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+*/
+
+.form-section {
+    /*
+        Form Section Headers
+    */
+    &-header {
+        &-personal {
+            background-color: $color-2;
+        }
+        &-residence {
+            background-color: $color-3;
+            @media (min-width: $bp-tablet) {
+                display: none;
+            }
+        }
+        &-income {
+            background-color: $color-4;
+            @media (min-width: $bp-tablet) {
+                display: none;
+            }
+        }
+        &-references {
+            background-color: $color-5;
+            @media (min-width: $bp-tablet) {
+                display: none;
+            }
+        }
+        &-other {
+            background-color: $color-6;
+            @media (min-width: $bp-tablet) {
+                display: none;
+            }
+        }
+        &-signatures {
+            background-color: $color-7;
+            @media (min-width: $bp-tablet) {
+                display: none;
+            }
+        }
+    }
+    /*
+        Form Section Body
+    */
+    &-body {
+        &-personal {
+            align-items: center;
+            padding: 1rem;
+            /*
+            ///////////////////////////////////////////////////////////////////////////////////////////////////////////
+            //                      Form-Section-Body-Persoanl Media Query for Devices less than 600
+            ///////////////////////////////////////////////////////////////////////////////////////////////////////////
+            */
+            @media screen and (max-width: $bp-phone) {
+                display: grid;
+                grid-template-rows: repeat(6, 1fr);
+                margin: 0 auto;
+            }
+            /*
+            ///////////////////////////////////////////////////////////////////////////////////////////////////////////
+            //                      Form-Section-Body-Persoanl Media Query for Devices more than 600
+            ///////////////////////////////////////////////////////////////////////////////////////////////////////////
+            */
+            @media screen and (min-width: $bp-phone) {
+                width: 70%;
+                height: 100%;
+                margin: 1rem auto;
+                border: 2px solid #f44336;
+                border-radius: 30px;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: 5% repeat(2, 15%) 25% 10%;
+                gap: 0px 0px;
+                grid-template-areas: "p-crntDate p-crntDate" "p-fname p-lname" "p-email p-phone" "p-license p-license" "p-co-applicant p-co-applicant";
+                .crntDate {
+                    grid-area: crntDate;
+                }
+                .p-fname {
+                    grid-area: p-fname;
+                }
+                .p-lname {
+                    grid-area: p-lname;
+                }
+                .p-email {
+                    grid-area: p-email;
+                }
+                .p-phone {
+                    grid-area: p-phone;
+                }
+                .p-license {
+                    grid-area: p-license;
+                }
+                .p-co-applicant {
+                    grid-area: p-co-applicant
+                }
+            }
+        }
+    }
+}
+
+
+/*
+    These need to be moved to their own sections at the top
+*/
+
+
+/* Medium devices (desktops, 90px and up) */
+
+@media (min-width: $bp-tablet) {
+    /*
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////
+    //   Personal Section 
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////
+    */
+    // Might want to just remove this
+    // #personal {
+    //     height: 100%;
+    // }
+    #residence,
+    #income,
+    #other,
+    #references,
+    #signatures {
+        /*
+            This could be changed to display hidden
+        */
+        display: none;
+    }
+}

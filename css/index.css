@@ -1,8 +1,14 @@
 @charset "UTF-8";
 /*
+    Abstracts
+*/
+/*
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////
 //    Variables
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////
+*/
+/*
+    Base
 */
 html {
   font-size: 16px;
@@ -45,51 +51,25 @@ h3 {
     font-size: 2rem !important;
   }
 }
+@media screen and (min-width: 600px) {
+  h2,
+h3 {
+    font-size: 2.5rem !important;
+  }
+}
 
+@media (min-width: 900px) {
+  h2 {
+    font-size: 2.98rem !important;
+  }
+
+  h3 {
+    font-size: 2.5rem !important;
+  }
+}
 form {
   overflow-y: scroll;
   scrollbar-width: none;
-}
-
-input {
-  border-bottom-color: #444444;
-  border-radius: 0;
-  display: block;
-  line-height: 0;
-  margin-top: 0.5em;
-  margin-bottom: 1.5em;
-  padding: 0.85em 0.75em 0.75em 0.75em;
-  width: calc(100% - 1.25em);
-  transition: 125ms border-color ease-out;
-}
-input:focus {
-  box-shadow: 0 0 0 3px white, 0 0 0 6px blue;
-  outline: none;
-}
-input:hover {
-  background-color: #0000db;
-  border-color: #0000b8;
-  text-decoration: underline;
-}
-input:active {
-  background-color: #000094;
-  border-color: #000070;
-  position: relative;
-  top: 1px;
-  text-decoration: none;
-  transition: none;
-}
-
-legend {
-  background-color: #28b4c8;
-  color: #f5f5f5;
-  padding: 3px 6px;
-  border-radius: 30px;
-}
-
-fieldset {
-  border: solid 2px #28b4c8 !important;
-  border-radius: 30px;
 }
 
 footer {
@@ -105,27 +85,12 @@ footer p {
 
 /*
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////
-//    Grid Container
+//    Fonts
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////
 */
-.grid-container {
-  display: grid;
-  /* grid-template-rows: minmax(120px, 4vh) 1fr; */
-  height: 100vh;
-  background-color: #f5f5f5;
-}
-@media screen and (max-width: 600px) and (min-width: 600px) {
-  .grid-container {
-    overflow-y: scroll;
-    grid-template-rows: minmax(30px, 0.2fr) 1fr;
-  }
-}
-@media (min-width: 900px) {
-  .grid-container {
-    grid-template-rows: minmax(120px, 0.2fr) 0.1fr 1fr;
-  }
-}
-
+/*
+    Components
+*/
 /*
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////
 //   Breadcrumbs Section
@@ -195,13 +160,70 @@ footer p {
 }
 
 /*
-///////////////////////////////////////////////////////////////////////////////////////////////////////////
-//   Label & Input bahavior
-///////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////
+//    Button Group 
+/////////////////////////////////////////////////////////////////////////////
 */
-.label-input-pair {
+.btn-group {
+  /* Clear floats (clearfix hack) */
+}
+.btn-group button {
+  background-color: #4CAF50;
+  /* Green background */
+  border: 1px solid green;
+  /* Green border */
+  color: white;
+  /* White text */
+  padding: 10px 24px;
+  /* Some padding */
+  cursor: pointer;
+  /* Pointer/hand icon */
   float: left;
-  margin-right: 20px;
+  /* Float the buttons side by side */
+  /* Add a background color on hover */
+}
+.btn-group button:not(:last-child) {
+  border-right: none;
+  /* Prevent double borders */
+}
+.btn-group button:hover {
+  background-color: #3e8e41;
+}
+.btn-group::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Small devices (tablets, 600px and up) */
+@media screen and (min-width: 600px) {
+  /*
+  ///////////////////////////////////////////////////////////////////////////////////////////////////////////
+  //   Personal Section 
+  ///////////////////////////////////////////////////////////////////////////////////////////////////////////
+  */
+  #coApplicantBtn {
+    /*
+        TODO : Make the button float to the right
+    */
+    width: 8rem;
+  }
+
+  .coApplicantLbl {
+    font-size: large;
+    align-self: center;
+  }
+}
+legend {
+  background-color: #28b4c8;
+  color: #f5f5f5;
+  padding: 3px 6px;
+  border-radius: 30px;
+}
+
+fieldset {
+  border: solid 2px #28b4c8 !important;
+  border-radius: 30px;
 }
 
 /*
@@ -216,6 +238,80 @@ footer p {
   .form-section-button {
     display: initial;
   }
+}
+
+/*
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+//    Input Text Boxes
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+*/
+input {
+  border-bottom-color: #444444;
+  border-radius: 0;
+  display: block;
+  line-height: 0;
+  margin-top: 0.5em;
+  margin-bottom: 1.5em;
+  padding: 0.85em 0.75em 0.75em 0.75em;
+  width: calc(100% - 1.25em);
+  transition: 125ms border-color ease-out;
+}
+input:focus {
+  box-shadow: 0 0 0 3px white, 0 0 0 6px blue;
+  outline: none;
+}
+input:hover {
+  background-color: #0000db;
+  border-color: #0000b8;
+  text-decoration: underline;
+}
+input:active {
+  background-color: #000094;
+  border-color: #000070;
+  position: relative;
+  top: 1px;
+  text-decoration: none;
+  transition: none;
+}
+
+/*
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+//   Label & Input bahavior
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+*/
+.label-input-pair {
+  float: left;
+  margin-right: 20px;
+}
+
+@media screen and (min-width: 600px) {
+  input,
+label {
+    display: block;
+    text-align: left;
+  }
+}
+/*
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+//   License Group Section
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+*/
+#license {
+  display: grid;
+  grid-template-columns: 1fr 0.25fr 0.75fr;
+  grid-template-rows: 1fr;
+  grid-gap: 1em 1em;
+}
+#license-pair-number {
+  grid-area: 1/1/2/3;
+}
+#license-pair-state {
+  display: flex;
+  flex-direction: column;
+  grid-area: 2/1/3/2;
+}
+#license-pair-exp {
+  grid-area: 2/2/3/3;
 }
 
 /*
@@ -270,50 +366,17 @@ footer p {
 }
 
 /*
-/////////////////////////////////////////////////////////////////////////////
-//    Button Group 
-/////////////////////////////////////////////////////////////////////////////
+    This is simply still in test so turning it off until
+    on anything lower than tablet size
 */
-.btn-group {
-  /* Clear floats (clearfix hack) */
+@media (min-width: 900px) {
+  .exclamation-point {
+    display: none;
+  }
 }
-.btn-group button {
-  background-color: #4CAF50;
-  /* Green background */
-  border: 1px solid green;
-  /* Green border */
-  color: white;
-  /* White text */
-  padding: 10px 24px;
-  /* Some padding */
-  cursor: pointer;
-  /* Pointer/hand icon */
-  float: left;
-  /* Float the buttons side by side */
-  /* Add a background color on hover */
-}
-.btn-group button:not(:last-child) {
-  border-right: none;
-  /* Prevent double borders */
-}
-.btn-group button:hover {
-  background-color: #3e8e41;
-}
-.btn-group::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-
 /*
-///////////////////////////////////////////////////////////////////////////////////////////////////////////
-//   Personal Section
-///////////////////////////////////////////////////////////////////////////////////////////////////////////
+    Layout
 */
-#personal {
-  width: 100%;
-}
-
 /*
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////
 //   Form Section
@@ -428,128 +491,15 @@ footer p {
 }
 
 /*
-///////////////////////////////////////////////////////////////////////////////////////////////////////////
-//   License Group Section
-///////////////////////////////////////////////////////////////////////////////////////////////////////////
-*/
-#license {
-  display: grid;
-  grid-template-columns: 1fr 0.25fr 0.75fr;
-  grid-template-rows: 1fr;
-  grid-gap: 1em 1em;
-}
-#license-pair-number {
-  grid-area: 1/1/2/3;
-}
-#license-pair-state {
-  display: flex;
-  flex-direction: column;
-  grid-area: 2/1/3/2;
-}
-#license-pair-exp {
-  grid-area: 2/2/3/3;
-}
-
-/*
-///////////////////////////////////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////////////////////////////////
-//                      Media Query for Devices 600 or higher
-///////////////////////////////////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////////////////////////////////
-*/
-/* Small devices (tablets, 600px and up) */
-@media screen and (min-width: 600px) {
-  h2,
-h3 {
-    font-size: 2.5rem !important;
-  }
-
-  /*
-  ///////////////////////////////////////////////////////////////////////////////////////////////////////////
-  //   Basics & Overrides
-  ///////////////////////////////////////////////////////////////////////////////////////////////////////////
-  */
-  input,
-label {
-    display: block;
-    text-align: left;
-  }
-
-  /*
-  ///////////////////////////////////////////////////////////////////////////////////////////////////////////
-  //   Personal Section 
-  ///////////////////////////////////////////////////////////////////////////////////////////////////////////
-  */
-  #coApplicantBtn {
-    /*
-        TODO : Make the button float to the right
-    */
-    width: 8rem;
-  }
-
-  .coApplicantLbl {
-    font-size: large;
-    align-self: center;
-  }
-}
-/*
-///////////////////////////////////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////////////////////////////////
-//                      Media Query for Devices 900 & up
-///////////////////////////////////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////////////////////////////////
+    These need to be moved to their own sections at the top
 */
 /* Medium devices (desktops, 90px and up) */
 @media (min-width: 900px) {
-  h2 {
-    font-size: 2.98rem !important;
-  }
-
-  h3 {
-    font-size: 2.5rem !important;
-  }
-
-  /*
-  ///////////////////////////////////////////////////////////////////////////////////////////////////////////
-  //   Form-Container 
-  ///////////////////////////////////////////////////////////////////////////////////////////////////////////
-  */
-  .form-container {
-    overflow: hidden;
-  }
-
-  /*
-  ///////////////////////////////////////////////////////////////////////////////////////////////////////////
-  //   Section Headers H3  
-  ///////////////////////////////////////////////////////////////////////////////////////////////////////////
-  */
-  .form-section-header-main {
-    background-color: orangered;
-  }
-
-  .form-section-header {
-    /* display: none; */
-  }
-
-  .exclamation-point {
-    display: none;
-  }
-
   /*
   ///////////////////////////////////////////////////////////////////////////////////////////////////////////
   //   Personal Section 
   ///////////////////////////////////////////////////////////////////////////////////////////////////////////
   */
-  #personal {
-    height: 100%;
-  }
-
-  #section-header-personal {
-    /*
-    background-color: orangered; 
-    */
-  }
-
   #residence,
 #income,
 #other,
@@ -563,14 +513,25 @@ label {
 }
 /*
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////////////////////////////////
-//                      Media Query for Devices 1200 & up
-///////////////////////////////////////////////////////////////////////////////////////////////////////////
+//    Grid Container
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////
 */
-/* Large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {
-  /* banner displayed only for desktops */
+.grid-container {
+  display: grid;
+  /* grid-template-rows: minmax(120px, 4vh) 1fr; */
+  height: 100vh;
+  background-color: #f5f5f5;
+}
+@media screen and (max-width: 600px) and (min-width: 600px) {
+  .grid-container {
+    overflow-y: scroll;
+    grid-template-rows: minmax(30px, 0.2fr) 1fr;
+  }
+}
+@media (min-width: 900px) {
+  .grid-container {
+    grid-template-rows: minmax(120px, 0.2fr) 0.1fr 1fr;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */
