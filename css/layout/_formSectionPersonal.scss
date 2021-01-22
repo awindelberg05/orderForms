@@ -1,0 +1,70 @@
+/*
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+//   Form Section - Headers
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+*/
+
+.form-section-header {
+    /*
+        Form Section Headers
+    */
+    &-personal {
+        background-color: $color-2;
+    }
+}
+
+
+/*
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+//   Form Section - Body
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+*/
+
+.form-section {
+    /*
+        Form Section Body
+    */
+    &-body__personal {
+            align-items: center;
+            padding: 1rem 2rem 1rem 2rem;
+            display: inline-grid;
+            grid-template-rows: .25fr repeat(5, 1fr);
+            /*
+                Form-Section-Body-Persoanl Media Query for Devices less than 600
+            */
+            @media screen and (max-width: $bp-phone) {
+                margin: 0 auto;
+                height: 100%;
+            }
+            /*
+                Form-Section-Body-Persoanl Media Query for Devices more than 600
+            */
+            @media screen and (min-width: $bp-phone) {
+                width: 50%;
+                height: 70%;
+                margin: 1rem auto;
+                border: 2px solid #f44336;
+                border-radius: 30px;
+            }
+    }
+}
+
+
+/*
+    These need to be moved to their own sections at the top
+*/
+
+
+/* Medium devices (desktops, 90px and up) */
+
+@media (min-width: $bp-tablet) {
+    /*
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////
+    //   Personal Section 
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////
+    */
+    // Might want to just remove this
+    // #personal {
+    //     height: 100%;
+    // }
+}

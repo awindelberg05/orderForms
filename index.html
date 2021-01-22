@@ -50,6 +50,10 @@
         </ol>
         <!-- <section id="form-section"> -->
         <form id="applicationForm" method="POST">
+
+
+
+
             <!-- Personal Form -->
             <h3 class="form-section-header form-section-header-personal" id="section-header-personal"> Personal <span class="exclamation-point">&#33;</span></h3>
             <section class="form-section-body" id="personal">
@@ -61,12 +65,12 @@
 
                     <div class="label-input-pair p-fname">
                         <label for="fname">First Name</label>
-                        <input type="text" name="fname" placeholder="Full Name" required>
+                        <input type="text" name="fname" placeholder="First Name" required>
                     </div>
 
                     <div class="label-input-pair p-lname">
                         <label for="lname">Last Name</label>
-                        <input type="text" name="lname" placeholder="Full Name" required>
+                        <input type="text" name="lname" placeholder="Last Name" required>
                     </div>
 
                     <div class="label-input-pair p-email">
@@ -79,20 +83,20 @@
                         <input type="text" name="phoneNumber" placeholder="Phone Number" required>
                     </div>
 
-                    <fieldset class="p-license" id="license">
-                        <div class="label-input-pair p-license-number">
-                            <label for="licenseNumber">License #</label>
-                            <input type="text" id="licenseNumber" name="licenseNumber" placeholder="License Number" required>
-                        </div>
+                    <div class="label-input-pair p-license-number">
+                        <label for="licenseNumber">License #</label>
+                        <input type="text" id="licenseNumber" name="licenseNumber" placeholder="License Number" required>
+                    </div>
 
-                        <div class="label-input-pair p-license-state">
+                    <fieldset class="p-license">
+                        <div class="label-select-pair p-license-state">
                             <label for="licenseState">State</label>
                             <select id="licenseState" name="licenseState" required></select>
                         </div>
 
-                        <div class="label-input-pair p-license-date">
+                        <div class="label-date-pair p-license-date">
                             <label for="expDate">Expiration Date</label>
-                            <input type="date" id="licenseExp" name="expDate" placeholder="Expiration Date" required>
+                            <input type="date" id="licenseExp" name="expDate" required>
                         </div>
                     </fieldset>
 
@@ -103,65 +107,80 @@
                 </div>
                 <button type="button" class="form-section-button" id="nxtBtn" value="personal" data-target="residence"> Next </button>
             </section>
+
+
             <!-- Residence -->
             <h3 class="form-section-header form-section-header-residence" id="section-header-residence"> Residence </h3>
             <section class="form-section-body" id="residence">
-                <div class="form-section-body__personal">
+                <div class="form-section-body__residence">
                     <!-- residence -->
-                    <div class="label-input-pair">
-                        <label for="address"> Address </label>
-                        <input type="text" name="address" id="address" required>
-                    </div>
 
-                    <div class="label-input-pair">
-                        <label for="address_2"> Address 2 </label>
-                        <input type="text" name="address_2" id="zip" required>
-                    </div>
+                    <fieldset class="form-section-body__residence-info">
+                        
+                        <div class="label-input-pair">
+                            <label for="address"> Address </label>
+                            <input type="text" name="address" id="address" required>
+                        </div>
+    
+                        <div class="label-input-pair">
+                            <label for="address_2"> Address 2 </label>
+                            <input type="text" name="address_2" id="zip" required>
+                        </div>
+                        
+                        <fieldset class="fieldset-CSZ">
+                            <div class="fieldset-CSZ-pair">
+                                <label for="city"> City </label>
+                                <input type="text" name="city" id="city" required>
+                            </div>
 
-                    <div class="label-input-pair">
-                        <label for="city"> City </label>
-                        <input type="text" name="city" id="city" required>
-                    </div>
+                            <div class="fieldset-CSZ-pair" >
+                                <label for="state"> State </label>
+                                <select name="state" id="state" required></select>
+                            </div>
+        
+                            <div class="label-input-pair">
+                                <label for="zip"> Zip Code </label>
+                                <input type="text" name="zip" id="zip" required>
+                            </div>
+                        </fieldset>
 
-                    <div class="label-input-pair">
-                        <label for="state"> State </label>
-                        <select name="state" id="state" required></select>
-                    </div>
+                        <div class="label-input-pair">
+                            <label for="monthlyPayments"> Monthly Payments </label>
+                            <input type="text" name="monthlyPayments" id="monthlyPayments">
+                        </div>
+                    </fieldset>
 
-                    <div class="label-input-pair">
-                        <label for="zip"> Zip Code </label>
-                        <input type="text" name="zip" id="zip" required>
-                    </div>
 
                     <div class="label-input-pair">
                         <label for="rentOrOwn"> Rent or Own </label>
                     </div>
+                    <fieldset>
+                        <legend>Landlord Information</legend>
+                        <div class="label-input-pair">
+                            <label for="landlordName"> Landlord/Morgage Name </label>
+                            <input type="text" name="landlordName" id="landlordName">
+                        </div>
 
-                    <div class="label-input-pair">
-                        <label for="landlordName"> Landlord/Morgage Name </label>
-                        <input type="text" name="landlordName" id="landlordName">
-                    </div>
+                        <div class="label-input-pair">
+                            <label for="landlordPhone"> Landlord Phone # </label>
+                            <input type="text" name="landlordPhone" id="landlordPhone">
+                        </div>
 
-                    <div class="label-input-pair">
-                        <label for="landlordPhone"> Landlord Phone # </label>
-                        <input type="text" name="landlordPhone" id="landlordPhone">
-                    </div>
-
-                    <div class="label-input-pair">
-                        <label for="monthlyPayments"> Monthly Payments </label>
-                        <input type="text" name="monthlyPayments" id="monthlyPayments">
-                    </div>
-
-                    <div class="label-input-pair">
-                        <label for="prevAddress"> Previous Address </label>
-                        <input type="text" name="prevAddress" id="prevAddress">
-                    </div>
+                        <div class="label-input-pair">
+                            <label for="prevAddress"> Previous Address </label>
+                            <input type="text" name="prevAddress" id="prevAddress">
+                        </div>
+                    </fieldset>
 
                 </div>
 
                 <button type="button" class="form-section-button" id="prvBtnResidence" value="residence" data-target="personal"> Previous </button>
                 <button type="button" class="form-section-button" id="nxtBtnResidence" value="residence" data-target="income"> Next </button>
             </section>
+
+
+
+
             <!-- income -->
             <h3 class="form-section-header form-section-header-income" id="section-header-income"> Income </h3>
             <section class="form-section-body" id="income">
@@ -183,12 +202,12 @@
 
                     <div class="label-input-pair">
                         <label for="shift">Shift</label>
-                        <input type="text" name="shift" id="shift">
+                        <!-- Add Button group here -->
                     </div>
 
                     <div class="label-input-pair">
-                        <label for="tripStart"></label>
-                        <input type="date" id="tripStart" name="tripStart" value="2018-07-22" min="2018-01-01" max="2018-12-31">
+                        <label for="hiringDate">Hiring Date</label>
+                        <input type="date" id="hiringDate" name="hiringDate" value="2018-07-22" min="2018-01-01" max="2018-12-31">
                     </div>
 
                     <div class="label-input-pair">

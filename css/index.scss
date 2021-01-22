@@ -21,7 +21,9 @@
 @import "components/fieldset";
 @import "components/formSectionBtn";
 @import "components/inputBox";
+@import "components/inputDatePair";
 @import "components/labelInputPair";
+@import "components/labelSelectPair";
 @import "components/licenseInput";
 @import "components/pageHeader";
 @import "components/warningSymbol";
@@ -29,6 +31,11 @@
 /*
     Layout
 */
-
+@import "layout/formSectionIncome";
+@import "layout/formSectionOther";
+@import "layout/formSectionPersonal";
+@import "layout/formSectionReferences";
+@import "layout/formSectionResidence";
 @import "layout/formSections";
+@import "layout/formSectionSignatures";
 @import "layout/pageContainer";

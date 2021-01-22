@@ -6,8 +6,39 @@ legend {
 }
 
 fieldset {
+    border: solid 2px grey !important;
+}
+
+.fieldset {
     // margin: 1rem !important;
     // padding: 1rem !important;
-    border: solid 2px grey !important;
     //border-radius: 30px;
+
+    // This fieldset was made for holding the City State and Postal Zip Code
+    &-CSZ {
+        display: inline-grid;
+        grid-template-columns: 1fr .40fr 1fr;
+
+        &-pair {
+            display: inline-grid;
+            grid-template-columns: .7fr 1fr;
+
+            & > label {
+                display: block;
+                height: 50%;
+                text-align: left;
+                padding-top: 1rem;
+                padding-left: 10%;
+                @media screen and (min-width: $bp-phone) {
+                    padding-left: 0;
+                }
+                // margin-right: 3%;
+            }
+            & > input {
+                padding-left: 2%;
+                width: 75%;
+            }
+        }
+    }
+
 }
