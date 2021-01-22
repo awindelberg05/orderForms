@@ -28,12 +28,11 @@
         margin: 0 auto;
     }
     // Form-Section-Body-Persoanl Media Query for Devices more than 600
-
     @media screen and (min-width: $bp-phone) {
         width: 50%;
         // height: 100%;
         margin: 1rem auto;
-        border: 2px solid #f44336;
+        border: 2px solid $color-4;
         border-radius: 30px;
     }
 }
@@ -42,7 +41,7 @@
 /* Medium devices (desktops, 90px and up) */
 
 @media (min-width: $bp-tablet) {
-    #income{
+    #income {
         /*
             This could be changed to display hidden
         */

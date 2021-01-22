@@ -105,7 +105,10 @@
                         <input type="checkbox" id="coApplicantBtn">Add a Co-Applicant ?</input>
                     </div>
                 </div>
-                <button type="button" class="form-section-button" id="nxtBtn" value="personal" data-target="residence"> Next </button>
+
+                <div>
+                    <button type="button" class="form-section-button" id="nxtBtn" value="personal" data-target="residence"> Next </button>
+                </div>
             </section>
 
 
@@ -116,66 +119,79 @@
                     <!-- residence -->
 
                     <fieldset class="form-section-body__residence-info">
-                        
+                        <legend> Applicant Address </legend>
                         <div class="label-input-pair">
                             <label for="address"> Address </label>
-                            <input type="text" name="address" id="address" required>
+                            <input type="text" name="address" id="address" placeholder="Address" required>
                         </div>
-    
+
                         <div class="label-input-pair">
                             <label for="address_2"> Address 2 </label>
-                            <input type="text" name="address_2" id="zip" required>
+                            <input type="text" name="address_2" id="zip" placeholder="Address" required>
                         </div>
-                        
+
                         <fieldset class="fieldset-CSZ">
                             <div class="fieldset-CSZ-pair">
                                 <label for="city"> City </label>
-                                <input type="text" name="city" id="city" required>
+                                <input type="text" name="city" id="city" placeholder="City" required>
                             </div>
 
-                            <div class="fieldset-CSZ-pair" >
+                            <div class="fieldset-CSZ-pair">
                                 <label for="state"> State </label>
-                                <select name="state" id="state" required></select>
+                                <select name="state" id="state" placeholder="State" required></select>
                             </div>
-        
-                            <div class="label-input-pair">
-                                <label for="zip"> Zip Code </label>
-                                <input type="text" name="zip" id="zip" required>
+
+                            <div class="fieldset-CSZ-pair">
+                                <label for="zip"> ZIP </label>
+                                <input type="text" name="zip" id="zip" placeholder="Zip Code" required>
                             </div>
                         </fieldset>
 
                         <div class="label-input-pair">
                             <label for="monthlyPayments"> Monthly Payments </label>
-                            <input type="text" name="monthlyPayments" id="monthlyPayments">
+                            <input type="text" name="monthlyPayments" id="monthlyPayments" placeholder="Monthly Payments">
                         </div>
                     </fieldset>
 
 
-                    <div class="label-input-pair">
-                        <label for="rentOrOwn"> Rent or Own </label>
-                    </div>
-                    <fieldset>
+                    <fieldset class="fieldset-RO">
+                        <legend> Rent/Own </legend>
+                        <div>
+                            <label for="rent"> Rent </label>
+                            <input id="rent" type="radio" name="homeStatus" value="rent" selected>
+                        </div>
+
+                        <div>
+                            <label for="own"> Own </label>
+                            <input id="own" type="radio" name="homeStatus" value="own">
+                        </div>
+                    </fieldset>
+
+
+                    <fieldset class="fieldset-LI">
                         <legend>Landlord Information</legend>
                         <div class="label-input-pair">
-                            <label for="landlordName"> Landlord/Morgage Name </label>
-                            <input type="text" name="landlordName" id="landlordName">
+                            <label for="landlordName"> Landlord Name </label>
+                            <input type="text" name="landlordName" id="landlordName" placeholder="Name">
                         </div>
 
                         <div class="label-input-pair">
                             <label for="landlordPhone"> Landlord Phone # </label>
-                            <input type="text" name="landlordPhone" id="landlordPhone">
+                            <input type="text" name="landlordPhone" id="landlordPhone" placeholder="Phone #">
                         </div>
 
                         <div class="label-input-pair">
                             <label for="prevAddress"> Previous Address </label>
-                            <input type="text" name="prevAddress" id="prevAddress">
+                            <input type="text" name="prevAddress" id="prevAddress" placeholder="Address">
                         </div>
                     </fieldset>
 
                 </div>
 
-                <button type="button" class="form-section-button" id="prvBtnResidence" value="residence" data-target="personal"> Previous </button>
-                <button type="button" class="form-section-button" id="nxtBtnResidence" value="residence" data-target="income"> Next </button>
+                <div>
+                    <button type="button" class="form-section-button" id="prvBtnResidence" value="residence" data-target="personal"> Previous </button>
+                    <button type="button" class="form-section-button" id="nxtBtnResidence" value="residence" data-target="income"> Next </button>
+                </div>
             </section>
 
 
@@ -184,7 +200,7 @@
             <!-- income -->
             <h3 class="form-section-header form-section-header-income" id="section-header-income"> Income </h3>
             <section class="form-section-body" id="income">
-                <div class="form-section-body__personal">
+                <div class="form-section-body__income">
                     <div class="label-input-pair">
                         <label for="employer">Employer</label>
                         <input type="text" name="employer" id="employer">
@@ -225,8 +241,9 @@
                         <input type="text" name="supevisor" id="supervisor">
                     </div>
 
-                    <div id="otherIncome" class="btn-group">
+                    <div id="additonalIncome" class="btn-group">
                         <!-- Convert this into a label and add a text field next to it -->
+                        askndasn
                     </div>
 
                     <div class="label-input-pair">
@@ -247,14 +264,18 @@
                     </div>
 
                 </div>
-                <!-- If we can't find a better way just stick the co-applicant here -->
-                <button type="button" class="form-section-button" id="prvBtnIncome" value="income" data-target="residence"> Previous </button>
-                <button type="button" class="form-section-button" id="nxtBtnIncome" value="income" data-target="references"> Next </button>
+
+                <div>
+                    <!-- If we can't find a better way just stick the co-applicant here -->
+                    <button type="button" class="form-section-button" id="prvBtnIncome" value="income" data-target="residence"> Previous </button>
+                    <button type="button" class="form-section-button" id="nxtBtnIncome" value="income" data-target="references"> Next </button>
+                </div>
+
             </section>
             <!-- references -->
             <h3 class="form-section-header form-section-header-references" id="section-header-references"> References </h3>
-            <section id="references">
-                <div>
+            <section class="form-section-body" id="references">
+                <div class="form-section-body__references">
                     <fieldset>
                         <legend>Parent/Relative Reference</legend>
                         <div class="label-input-pair">
@@ -288,7 +309,7 @@
                         </div>
 
                         <div class="label-input-pair">
-                            <label for="rName">Zip Code</label>
+                            <label for="rName">ZIP</label>
                             <input type="text" name="rZip" id="rZip">
                         </div>
 
@@ -298,81 +319,97 @@
                         </div>
                     </fieldset>
                 </div>
-                <button type="button" class="form-section-button" id="prvBtnReferences" value="references" data-target="income"> Previous </button>
-                <button type="button" class="form-section-button" id="nxtBtnReferences" value="references" data-target="other"> Next </button>
+                <div>
+                    <button type="button" class="form-section-button" id="prvBtnReferences" value="references" data-target="income"> Previous </button>
+                    <button type="button" class="form-section-button" id="nxtBtnReferences" value="references" data-target="other"> Next </button>
+                </div>
+
             </section>
             <!-- others -->
             <h3 class="form-section-header form-section-header-other" id="section-header-other"> Other </h3>
-            <section id="other">
-                <div class="label-input-pair">
-                    <label for="vehicleYR">Year</label>
-                    <input type="text" name="vehicleYR" id="vehicleYR">
+            <section class="form-section-body" id="other">
+                <div class="form-section-body__other">
+                    <fieldset>
+                        <div class="label-input-pair">
+                            <label for="vehicleYR">Year</label>
+                            <input type="text" name="vehicleYR" id="vehicleYR" placeholder="Year">
+                        </div>
+
+                        <div class="label-input-pair">
+                            <label for="vehicleYR">Make</label>
+                            <input type="text" name="vehicleMK" id="vehicleMK" placeholder="Make">
+                        </div>
+
+                        <div class="label-input-pair">
+                            <label for="vehicleYR">Model</label>
+                            <input type="text" name="vehicleML" id="vehicleML" placeholder="Model">
+                        </div>
+
+                        <div class="label-input-pair">
+                            <label for="vehicleYR">Color</label>
+                            <input type="text" name="vehicleCL" id="vehicleCL" placeholder="Color">
+                        </div>
+
+                        <div class="label-input-pair">
+                            <label for="vehicleYR">Tag #</label>
+                            <input type="text" name="vehicleTG" id="vehicleTG" placeholder="Tag">
+                        </div>
+
+                        <div class="label-input-pair">
+                            <label for="vehicleYR">Monthly Payments</label>
+                            <input type="text" name="vehicleMP" id="vehicleMP" placeholder="Monthly Payments">
+                        </div>
+                    </fieldset>
+
+
+                    <fieldset>
+                        <div class="label-input-pair">
+                            <label for="vehicleYR">Registered To</label>
+                            <input type="text" name="vehicleRG" id="vehicleRG">
+                        </div>
+
+                        <div class="label-input-pair">
+                            <label for="vehicleYR">Financed By</label>
+                            <input type="text" name="vehicleFB" id="vehicleFB">
+                        </div>
+                    </fieldset>
+
+                    <div class="label-input-pair">
+                        <label for="vehicleYR">Subscribe</label>
+                        <!-- A Place we can put the Initials or can this be placed in the signing area?-->
+                        <input type="checkbox" name="subscribe" id="subscribe">
+                    </div>
                 </div>
 
-                <div class="label-input-pair">
-                    <label for="vehicleYR">Make</label>
-                    <input type="text" name="vehicleMK" id="vehicleMK">
+                <div>
+                    <button type="button" class="form-section-button" id="nxtBtnOther" value="other" data-target="references"> Previous </button>
+                    <button type="button" class="form-section-button" id="prvBtnOther" value="other" data-target="signatures"> Next </button>
                 </div>
-
-                <div class="label-input-pair">
-                    <label for="vehicleYR">Model</label>
-                    <input type="text" name="vehicleML" id="vehicleML">
-                </div>
-
-                <div class="label-input-pair">
-                    <label for="vehicleYR">Color</label>
-                    <input type="text" name="vehicleCL" id="vehicleCL">
-                </div>
-
-                <div class="label-input-pair">
-                    <label for="vehicleYR">Tag #</label>
-                    <input type="text" name="vehicleTG" id="vehicleTG">
-                </div>
-
-                <div class="label-input-pair">
-                    <label for="vehicleYR">Registered To</label>
-                    <input type="text" name="vehicleRG" id="vehicleRG">
-                </div>
-
-                <div class="label-input-pair">
-                    <label for="vehicleYR">Monthly Payments</label>
-                    <input type="text" name="vehicleMP" id="vehicleMP">
-                </div>
-
-                <div class="label-input-pair">
-                    <label for="vehicleYR">Financed By</label>
-                    <input type="text" name="vehicleFB" id="vehicleFB">
-                </div>
-
-                <div class="label-input-pair">
-                    <label for="vehicleYR">Subscribe</label>
-                    <!-- A Place we can put the Initials or can this be placed in the signing area?-->
-                    <input type="checkbox" name="subscribe" id="subscribe">
-                </div>
-                <button type="button" class="form-section-button" id="nxtBtnOther" value="other" data-target="references"> Previous </button>
-                <button type="button" class="form-section-button" id="prvBtnOther" value="other" data-target="signatures"> Next </button>
             </section>
 
             <!-- Signatures -->
             <h3 class="form-section-header form-section-header-signatures" id="section-header-signatures"> Signatures </h3>
-            <section id="signatures">
-                <!-- signatures -->
-                <div class="label-input-pair">
-                    <label for="applicantName">Applicant Name</label>
-                    <!-- A Place we can put the Initials or can this be placed in the signing area?-->
-                    <input type="text" name="sdf" id="asd">
-                </div>
-                <div class="label-input-pair">
-                    <label id="crntDate"></label>
-                    <!-- A Place we can put the Initials or can this be placed in the signing area?-->
-                    <input type="text" name="sdf" id="asd">
+            <section class="form-section-body" id="signatures">
+                <div class="form-section-body__signatures">
+                    <!-- signatures -->
+                    <div class="label-input-pair">
+                        <label for="applicantName">Applicant Name</label>
+                        <!-- A Place we can put the Initials or can this be placed in the signing area?-->
+                        <input type="text" name="sdf" id="asd">
+                    </div>
+                    <div class="label-input-pair">
+                        <label id="crntDate"></label>
+                        <!-- A Place we can put the Initials or can this be placed in the signing area?-->
+                        <input type="text" name="sdf" id="asd">
+                    </div>
+
+                    <div class="label-input-pair">
+                        <label for="applicantSS">Applicant Social Security</label>
+                        <!-- A Place we can put the Initials or can this be placed in the signing area?-->
+                        <input type="text" name="asd" id="asd">
+                    </div>
                 </div>
 
-                <div class="label-input-pair">
-                    <label for="applicantSS">Applicant Social Security</label>
-                    <!-- A Place we can put the Initials or can this be placed in the signing area?-->
-                    <input type="text" name="asd" id="asd">
-                </div>
 
                 <button type="button" class="form-section-button" id="prvBtnSignatures" value="signatures" data-target="other"> Previous </button>
                 <button class="form-section-button" id="submit" value="submit" data-target="submit"> Submit </button>

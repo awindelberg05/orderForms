@@ -61,6 +61,6 @@ const stateAbbreviations = ["AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DE", "FL"
 
 const daysArray = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
-const otherIncomeArray = ["Disability", "SSI", "AFDC", "Child Support", "Other"];
+const additionalIncomeArray = ["Disability", "SSI", "AFDC", "Child Support", "Other"];
 
 const payFrequencyArray = ["Weekly", "Bi-Weekly", "Semi-Monthly", "Monthly"];

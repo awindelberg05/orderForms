@@ -5,28 +5,18 @@
 */
 
 .label-input-pair {
-
+    display: grid;
+    align-items: center;
     padding-top: 2%;
-    font-size: 1.2rem;
-
     // input pair on anything lower than tablet 01 breakpoint
-    @media screen and (max-width: $bp-tablet-01) {
-
-    }
+    @media screen and (max-width: $bp-tablet-01) {}
     // input pair on anything over the tablet 01 breakpoint
     @media screen and (min-width: $bp-tablet-01) {
         display: inline-grid;
         grid-template-columns: .20fr 1fr;
     }
-    // Input pair on anything over the laptop breakpoint
-    // @media screen and (min-width: $bp-tablet-01) {
-    //     display: inline-grid;
-    //     grid-template-columns: .18fr 1fr;
-    // }
-
-
     &>label {
-        display: block;
+        display: inline-block;
         height: 50%;
         text-align: left;
         padding-top: 1rem;
@@ -34,11 +24,5 @@
         @media screen and (min-width: $bp-phone) {
             padding-left: 0;
         }
-        // margin-right: 3%;
     }
-    &>input {
-        padding-left: 2%;
-        width: 75%;
-    }
-
 }

@@ -1,0 +1,18 @@
+legend {
+    font-size: 1em;
+    font-weight: 600;
+    color: black;
+}
+
+fieldset {
+    font-size: 1em;
+    padding: 0.5em;
+    border: solid 2px grey !important;
+    label,
+    input,
+    button {
+        font-size: inherit;
+        margin: 0.1em, 0.2em;
+        box-sizing: content-box;
+    }
+}

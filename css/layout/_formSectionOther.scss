@@ -11,6 +11,7 @@
     }
 }
 
+
 /*
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////
 //   Form Section - Body
@@ -21,7 +22,7 @@
     align-items: center;
     padding: 1rem 2rem 1rem 2rem;
     display: inline-grid;
-    grid-template-rows: .25fr repeat(5, 1fr);
+    grid-template-rows: 1fr .50fr .25fr;
     // Form-Section-Body-Persoanl Media Query for Devices less than 600
     @media screen and (max-width: $bp-phone) {
         margin: 0 auto;
@@ -31,10 +32,11 @@
         width: 50%;
         // height: 100%;
         margin: 1rem auto;
-        border: 2px solid #f44336;
+        border: 2px solid $color-6;
         border-radius: 30px;
     }
 }
+
 
 /* Medium devices (desktops, 90px and up) */
 

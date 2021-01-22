@@ -9,6 +9,8 @@
 */
 
 @import "base/basic";
+@import "base/fieldset";
+@import "base/inputText";
 @import "base/typography";
 
 /*
@@ -18,9 +20,10 @@
 @import "components/breadcrumbs";
 @import "components/btnGroup";
 @import "components/coApplicantBntLbl";
-@import "components/fieldset";
+@import "components/fieldsetCSZPair";
+@import "components/fieldsetLandlordInfo";
+@import "components/fieldsetROPair";
 @import "components/formSectionBtn";
-@import "components/inputBox";
 @import "components/inputDatePair";
 @import "components/labelInputPair";
 @import "components/labelSelectPair";
@@ -31,6 +34,7 @@
 /*
     Layout
 */
+
 @import "layout/formSectionIncome";
 @import "layout/formSectionOther";
 @import "layout/formSectionPersonal";

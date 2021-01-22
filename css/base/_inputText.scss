@@ -5,6 +5,8 @@
 */
 
 input[type="text"] {
+    width: calc(100% - 1.25em); // previously calc(100% - 1.25em)
+    height: 20px;
     border-top: none;
     border-right: none;
     border-bottom: 2px solid #444444;
@@ -16,7 +18,6 @@ input[type="text"] {
     margin-top: 0.7em; // previously 0.5em
     margin-bottom: 0; // previously 1.5em
     padding: 0.7em 0.4em 0.4em 0.4em; //previously 0.85em 0.75em 0.75em 0.75em
-    width: 100%; // previously calc(100% - 1.25em)
     transition: map-get($transition, speed-fast) border-color map-get($transition, easing);
     // States
     &:focus {
