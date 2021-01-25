@@ -2,8 +2,9 @@
 .fieldset {
     // This fieldset was made for holding the City State and Postal Zip Code
     &-CSZ {
-        display: inline-grid;
-        grid-template-columns: 1fr .78fr .75fr;
+        @include newGrid(inline-grid, 1, 1 .78 .75);
+        //display: inline-grid;
+        //grid-template-columns: 1fr .78fr .75fr;
         align-items: center;
         &-pair {
             display: inline-grid;

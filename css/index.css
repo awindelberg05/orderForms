@@ -8,6 +8,14 @@
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////
 */
 /*
+    Grid Mixin
+    -webkit- (Chrome, Safari, newer versions of Opera, almost all iOS browsers including Firefox for iOS; basically, any WebKit based browser)
+    -moz- (Firefox)
+    -o- (old pre-WebKit versions of Opera)
+    -ms- (Internet Explorer and Microsoft Edge)
+
+*/
+/*
     Base
 */
 html {
@@ -257,9 +265,14 @@ input[type=text]:active {
   }
 }
 .fieldset-CSZ {
-  display: inline-grid;
-  grid-template-columns: 1fr 0.78fr 0.75fr;
   align-items: center;
+}
+@supports (display: grid) {
+  .fieldset-CSZ {
+    display: inline-grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 0.78fr 0.75fr;
+  }
 }
 .fieldset-CSZ-pair {
   display: inline-grid;
