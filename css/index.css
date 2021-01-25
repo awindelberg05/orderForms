@@ -16,6 +16,11 @@
 
 */
 /*
+    Name : customGrid
+    Description : Takes in a display property and two sets of values which represent the
+                  number of rows columns respectively.
+*/
+/*
     Base
 */
 html {
@@ -78,7 +83,6 @@ fieldset {
   font-size: 1em;
   padding: 0.5em;
   border: solid 2px grey !important;
-  display: grid;
 }
 fieldset label,
 fieldset input,
@@ -275,9 +279,14 @@ input[type=text]:active {
   }
 }
 .fieldset-CSZ-pair {
-  display: inline-grid;
-  grid-template-columns: 0.7fr 1fr;
   height: 100%;
+}
+@supports (display: grid) {
+  .fieldset-CSZ-pair {
+    display: inline-grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 0.7fr 1fr;
+  }
 }
 .fieldset-CSZ-pair > label {
   display: block;
@@ -304,8 +313,14 @@ input[type=text]:active {
 }
 
 .fieldset-RO {
-  grid-template-columns: 1fr repeat(2, 0.5fr);
   align-self: end;
+}
+@supports (display: grid) {
+  .fieldset-RO {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 0.5fr 0.5fr;
+  }
 }
 .fieldset-RO > div > label {
   display: block;
@@ -314,6 +329,7 @@ input[type=text]:active {
   text-align: right;
 }
 .fieldset-LI {
+  display: grid;
   grid-template-rows: repeat(3, 1fr);
   align-self: center;
   padding: 1rem;
@@ -323,10 +339,16 @@ input[type=text]:active {
 }
 
 .fieldset-MR {
-  grid-template-rows: repeat(1, 1fr);
   align-self: center;
   padding: 0 1rem 1rem 1rem;
   margin-top: 1rem;
+}
+@supports (display: grid) {
+  .fieldset-MR {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+  }
 }
 .fieldset-MR > div > label {
   display: block;
@@ -444,11 +466,15 @@ input[type=text]:active {
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////
 */
 .p-license {
-  display: grid;
-  grid-template-columns: 0.4fr 1fr;
-  grid-template-rows: 1fr;
   grid-gap: 0 0;
   border: none !important;
+}
+@supports (display: grid) {
+  .p-license {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 0.4fr 1fr;
+  }
 }
 
 /*
@@ -841,20 +867,22 @@ input[type=text]:active {
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////
 */
 .grid-container {
-  display: grid;
-  /* grid-template-rows: minmax(120px, 4vh) 1fr; */
   height: 100vh;
   background-color: #f5f5f5;
 }
 @media screen and (max-width: 600px) and (min-width: 600px) {
   .grid-container {
     overflow-y: scroll;
-    grid-template-rows: minmax(30px, 0.2fr) 1fr;
+    display: block;
   }
 }
 @media (min-width: 900px) {
-  .grid-container {
-    grid-template-rows: minmax(120px, 0.2fr) 0.1fr 1fr;
+  @supports (display: grid) {
+    .grid-container {
+      display: grid;
+      grid-template-rows: minmax(120px, 0.2fr) 0.1fr 1fr;
+      grid-template-columns: 1fr;
+    }
   }
 }
 

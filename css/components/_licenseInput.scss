@@ -5,9 +5,7 @@
 */
 
 .p-license {
-    display: grid;
-    grid-template-columns: .40fr 1fr;
-    grid-template-rows: 1fr;
+    @include customGrid(grid, 1, .40 1);
     grid-gap: 0 0;
     border: none !important;
 }

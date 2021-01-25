@@ -5,16 +5,18 @@
 */
 
 .grid-container {
-    display: grid;
-    /* grid-template-rows: minmax(120px, 4vh) 1fr; */
+    //display: grid;
     height: 100vh;
     background-color: $color-background;
     // Width < 600px
     @media screen and (max-width: $bp-phone) and (min-width: $bp-phone) {
         overflow-y: scroll;
-        grid-template-rows: minmax(30px, .20fr) 1fr;
+        // When doing mobile check to see the best manner in which to handle this
+        display: block;
+        // display: grid;
+        // grid-template-rows: minmax(30px, .20fr) 1fr;
     }
     @media (min-width: $bp-tablet) {
-        grid-template-rows: minmax(120px, .20fr) .10fr 1fr;
+        @include customGrid(grid, minmax(120px, .20fr) .1 1, 1);
     }
 }

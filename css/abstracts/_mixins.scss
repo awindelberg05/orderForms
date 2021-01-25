@@ -15,16 +15,33 @@
     transition: all $time ease;
 }
 
+
+/*
+    Name : customGrid
+    Description : Takes in a display property and two sets of values which represent the
+                  number of rows columns respectively.
+*/
+
 @mixin customGrid($display:null, $template-rows:null, $template-cols:null) {
     @supports (display: grid) {
         display: $display;
         $grid-rows: ();
         $grid-cols: ();
         @each $rows in $template-rows {
-            $grid-rows: append($grid-rows, #{$rows}fr);
+            @if type-of($rows)=='number' {
+                $grid-rows: append($grid-rows, #{$rows}fr);
+            }
+            @else {
+                $grid-rows: append($grid-rows, #{$rows});
+            }
         }
         @each $cols in $template-cols {
-            $grid-cols: append($grid-cols, #{$cols}fr);
+            @if type-of($cols)=='number' {
+                $grid-cols: append($grid-cols, #{$cols}fr);
+            }
+            @else {
+                $grid-cols: append($grid-cols, #{$cols});
+            }
         }
         grid-template-rows: #{$grid-rows};
         grid-template-columns: #{$grid-cols};
