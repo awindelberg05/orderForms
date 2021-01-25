@@ -1,3 +1,4 @@
+// CSZ 
 .fieldset {
     // This fieldset was made for holding the City State and Postal Zip Code
     &-CSZ {
@@ -12,8 +13,9 @@
                 display: block;
                 align-self: center;
                 height: 50%;
-                text-align: left;
+                text-align: right; // Reminder : This is a test to see if it's better vs left alight
                 padding-left: 10%;
+                padding-right: 10%;
                 @media screen and (min-width: $bp-phone) {
                     padding-left: 0;
                 }
@@ -29,6 +31,43 @@
                 width: 50%;
                 height: 50%;
             }
+        }
+    }
+}
+
+.fieldset {
+    &-RO {
+        grid-template-columns: 1fr repeat(2, .5fr);
+        align-self: end;
+        &>div>label {
+            display: block;
+        }
+        &>div:first-child {
+            text-align: right; // Reminder : This is code for experimenting
+        }
+        &>div:nth-child(1) {}
+    }
+}
+
+.fieldset {
+    &-LI {
+        grid-template-rows: repeat(3, 1fr);
+        align-self: center;
+        padding: 1rem;
+        &>div>label {
+            display: block;
+        }
+    }
+}
+
+.fieldset {
+    &-MR {
+        grid-template-rows: repeat(1, 1fr);
+        align-self: center;
+        padding: 0 1rem 1rem 1rem;
+        margin-top: 1rem;
+        &>div>label {
+            display: block;
         }
     }
 }

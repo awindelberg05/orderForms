@@ -70,6 +70,7 @@ fieldset {
   font-size: 1em;
   padding: 0.5em;
   border: solid 2px grey !important;
+  display: grid;
 }
 fieldset label,
 fieldset input,
@@ -269,8 +270,9 @@ input[type=text]:active {
   display: block;
   align-self: center;
   height: 50%;
-  text-align: left;
+  text-align: right;
   padding-left: 10%;
+  padding-right: 10%;
 }
 @media screen and (min-width: 600px) {
   .fieldset-CSZ-pair > label {
@@ -288,8 +290,17 @@ input[type=text]:active {
   height: 50%;
 }
 
+.fieldset-RO {
+  grid-template-columns: 1fr repeat(2, 0.5fr);
+  align-self: end;
+}
+.fieldset-RO > div > label {
+  display: block;
+}
+.fieldset-RO > div:first-child {
+  text-align: right;
+}
 .fieldset-LI {
-  display: grid;
   grid-template-rows: repeat(3, 1fr);
   align-self: center;
   padding: 1rem;
@@ -298,12 +309,13 @@ input[type=text]:active {
   display: block;
 }
 
-.fieldset-RO {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  align-self: end;
+.fieldset-MR {
+  grid-template-rows: repeat(1, 1fr);
+  align-self: center;
+  padding: 0 1rem 1rem 1rem;
+  margin-top: 1rem;
 }
-.fieldset-RO > div > label {
+.fieldset-MR > div > label {
   display: block;
 }
 
@@ -372,9 +384,8 @@ input[type=text]:active {
 .label-input-pair > label {
   display: inline-block;
   height: 50%;
-  text-align: left;
-  padding-top: 1rem;
-  padding-left: 10%;
+  text-align: right;
+  padding: 1rem 10% 0 10%;
 }
 @media screen and (min-width: 600px) {
   .label-input-pair > label {
@@ -737,7 +748,7 @@ input[type=text]:active {
 }
 .form-section-body__residence-info {
   display: inline-grid;
-  grid-template-rows: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
   padding: 0 1rem 1rem 1rem;
 }
 

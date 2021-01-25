@@ -18,9 +18,8 @@
     &>label {
         display: inline-block;
         height: 50%;
-        text-align: left;
-        padding-top: 1rem;
-        padding-left: 10%;
+        text-align: right; // Reminder : This is a test to see if it's better vs left alight
+        padding: 1rem 10% 0 10%;
         @media screen and (min-width: $bp-phone) {
             padding-left: 0;
         }

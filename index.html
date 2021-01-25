@@ -80,12 +80,12 @@
 
                     <div class="label-input-pair p-phone">
                         <label for="phoneNumber">Phone #</label>
-                        <input type="text" name="phoneNumber" placeholder="Phone Number" required>
+                        <input type="text" name="phoneNumber" placeholder="Phone #" required>
                     </div>
 
                     <div class="label-input-pair p-license-number">
                         <label for="licenseNumber">License #</label>
-                        <input type="text" id="licenseNumber" name="licenseNumber" placeholder="License Number" required>
+                        <input type="text" id="licenseNumber" name="licenseNumber" placeholder="License #" required>
                     </div>
 
                     <fieldset class="p-license">
@@ -127,7 +127,7 @@
 
                         <div class="label-input-pair">
                             <label for="address_2"> Address 2 </label>
-                            <input type="text" name="address_2" id="zip" placeholder="Address" required>
+                            <input type="text" name="address_2" id="zip" placeholder="Address 2" required>
                         </div>
 
                         <fieldset class="fieldset-CSZ">
@@ -143,10 +143,42 @@
 
                             <div class="fieldset-CSZ-pair">
                                 <label for="zip"> ZIP </label>
-                                <input type="text" name="zip" id="zip" placeholder="Zip Code" required>
+                                <input type="text" name="zip" id="zip" placeholder="ZIP" required>
                             </div>
                         </fieldset>
 
+
+                        <fieldset class="fieldset-RO">
+                            <div>Do you currently rent or own the property listed above?</div>
+                            <div>
+                                <label for="rent"> Rent </label>
+                                <input id="rent" type="radio" name="homeStatus" value="rent" selected>
+                            </div>
+
+                            <div>
+                                <label for="own"> Own </label>
+                                <input id="own" type="radio" name="homeStatus" value="own">
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="fieldset-RO">
+                            <div>Have you lived in your current residence for more than one year?</div>
+                            <div>
+                                <label for="yes"> Yes </label>
+                                <input id="yesBtn" type="radio" name="crrAddrsLongivity" value="yes" selected>
+                            </div>
+
+                            <div>
+                                <label for="no"> No </label>
+                                <input id="noBtn" type="radio" name="crrAddrsLongivity" value="no">
+                            </div>
+                        </fieldset>
+
+                    </fieldset>
+
+
+                    <fieldset class="fieldset-MR">
+                        <legend>Rental Information</legend>
                         <div class="label-input-pair">
                             <label for="monthlyPayments"> Monthly Payments </label>
                             <input type="text" name="monthlyPayments" id="monthlyPayments" placeholder="Monthly Payments">
@@ -154,35 +186,24 @@
                     </fieldset>
 
 
-                    <fieldset class="fieldset-RO">
-                        <legend> Rent/Own </legend>
-                        <div>
-                            <label for="rent"> Rent </label>
-                            <input id="rent" type="radio" name="homeStatus" value="rent" selected>
-                        </div>
 
-                        <div>
-                            <label for="own"> Own </label>
-                            <input id="own" type="radio" name="homeStatus" value="own">
-                        </div>
-                    </fieldset>
 
 
                     <fieldset class="fieldset-LI">
                         <legend>Landlord Information</legend>
                         <div class="label-input-pair">
                             <label for="landlordName"> Landlord Name </label>
-                            <input type="text" name="landlordName" id="landlordName" placeholder="Name">
+                            <input type="text" name="landlordName" id="landlordName" placeholder="Landlord Name">
                         </div>
 
                         <div class="label-input-pair">
                             <label for="landlordPhone"> Landlord Phone # </label>
-                            <input type="text" name="landlordPhone" id="landlordPhone" placeholder="Phone #">
+                            <input type="text" name="landlordPhone" id="landlordPhone" placeholder="Landlord Phone #">
                         </div>
 
                         <div class="label-input-pair">
                             <label for="prevAddress"> Previous Address </label>
-                            <input type="text" name="prevAddress" id="prevAddress" placeholder="Address">
+                            <input type="text" name="prevAddress" id="prevAddress" placeholder="Previous Address">
                         </div>
                     </fieldset>
 
@@ -193,8 +214,6 @@
                     <button type="button" class="form-section-button" id="nxtBtnResidence" value="residence" data-target="income"> Next </button>
                 </div>
             </section>
-
-
 
 
             <!-- income -->

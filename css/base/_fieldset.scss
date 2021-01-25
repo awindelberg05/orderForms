@@ -4,10 +4,12 @@ legend {
     color: black;
 }
 
+// Generic 
 fieldset {
     font-size: 1em;
     padding: 0.5em;
     border: solid 2px grey !important;
+    display: grid;
     label,
     input,
     button {
