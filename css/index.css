@@ -457,14 +457,19 @@ input[type=text]:active {
 /////////////////////////////////////////////////////////////////////////////
 */
 .header {
-  display: grid;
-  grid-template-columns: 1.25fr 1.75fr;
   background-color: navy;
   /*
   TODO : The image is a little large on anything with a
          width of 700px, maybe make a media query to make
          image stay in better quality
   */
+}
+@supports (display: grid) {
+  .header {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 0.5fr 1fr;
+  }
 }
 .header-logo {
   display: block;

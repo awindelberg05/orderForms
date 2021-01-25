@@ -15,7 +15,7 @@
     transition: all $time ease;
 }
 
-@mixin newGrid($display:null, $template-rows:null, $template-cols:null) {
+@mixin customGrid($display:null, $template-rows:null, $template-cols:null) {
     @supports (display: grid) {
         display: $display;
         $grid-rows: ();

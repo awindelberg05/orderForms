@@ -5,8 +5,7 @@
 */
 
 .header {
-    display: grid;
-    grid-template-columns: 1.25fr 1.75fr;
+    @include customGrid(grid, 1, .5 1);
     background-color: $color-1;
     &-logo {
         display: block;
