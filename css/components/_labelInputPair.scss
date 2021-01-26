@@ -7,7 +7,7 @@
 .label-input-pair {
     display: grid;
     align-items: center;
-    padding-top: 2%;
+    padding: 0.5em;
     // input pair on anything lower than tablet 01 breakpoint
     @media screen and (max-width: $bp-tablet-01) {}
     // input pair on anything over the tablet 01 breakpoint

@@ -295,7 +295,7 @@ input[type=text]:active {
   .fieldset-CSZ-pair {
     display: inline-grid;
     grid-template-rows: 1fr;
-    grid-template-columns: 0.7fr 1fr;
+    grid-template-columns: 0.73fr 1fr;
   }
 }
 .fieldset-CSZ-pair > label {
@@ -427,7 +427,7 @@ input[type=text]:active {
 .label-input-pair {
   display: grid;
   align-items: center;
-  padding-top: 2%;
+  padding: 0.5em;
 }
 @media screen and (min-width: 1100px) {
   .label-input-pair {
