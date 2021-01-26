@@ -2,8 +2,8 @@
 .fieldset {
     // This fieldset was made for holding the City State and Postal Zip Code
     &-CSZ {
+        @extend %fieldset;
         @include customGrid(inline-grid, 1, 1 .78 .75);
-        align-items: center;
         &-pair {
             @include customGrid(inline-grid, 1, .7 1);
             height: 100%;
@@ -32,31 +32,38 @@
         }
     }
     &-RO {
-        @include customGrid(grid, 1, 1 .5 .5);
-        align-self: end;
+        @extend %fieldset;
+        @include customGrid(grid, 1, 1 repeat(2, .5fr));
         &>div>label {
             display: block;
         }
         &>div:first-child {
             text-align: right; // Reminder : This is code for experimenting
         }
-        &>div:nth-child(1) {}
+
     }
     &-LI {
+        @extend %fieldset;
         @include customGrid(grid, repeat(3, 1fr), 1);
-        align-self: center;
         padding: 1rem;
         &>div>label {
             display: block;
         }
     }
     &-MR {
+        @extend %fieldset;
         @include customGrid(grid, 1, 1);
-        align-self: center;
         padding: 0 1rem 1rem 1rem;
         margin-top: 1rem;
         &>div>label {
             display: block;
         }
+    }
+
+    &-license {
+        @extend %fieldset;
+        @include customGrid(grid, 1, .40 1);
+        grid-gap: 0 0;
+        border: none !important;
     }
 }
