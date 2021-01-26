@@ -220,68 +220,99 @@
             <h3 class="form-section-header form-section-header-income" id="section-header-income"> Income </h3>
             <section class="form-section-body" id="income">
                 <div class="form-section-body__income">
-                    <div class="label-input-pair">
-                        <label for="employer">Employer</label>
-                        <input type="text" name="employer" id="employer">
-                    </div>
 
-                    <div class="label-input-pair">
-                        <label for="empAddress">Employer Address</label>
-                        <input type="text" name="empAddress" id="empAddress">
-                    </div>
-
-                    <div class="label-input-pair">
-                        <label for="jobTitle">Job Title</label>
-                        <input type="text" name="jobTitle" id="jobTitle">
-                    </div>
-
-                    <div class="label-input-pair">
-                        <label for="shift">Shift</label>
-                        <!-- Add Button group here -->
-                    </div>
-
-                    <div class="label-input-pair">
-                        <label for="hiringDate">Hiring Date</label>
-                        <input type="date" id="hiringDate" name="hiringDate" value="2018-07-22" min="2018-01-01" max="2018-12-31">
-                    </div>
-
-                    <div class="label-input-pair">
-                        <label for="phone">Phone #</label>
-                        <input type="text" name="phone" id="phone">
-                    </div>
-
-                    <div class="label-input-pair">
-                        <label for="extDept">Extension/Dept</label>
-                        <input type="text" name="extDept" id="extDept">
-                    </div>
-
-                    <div class="label-input-pair">
-                        <label for="supevisor">Supervisor</label>
-                        <input type="text" name="supevisor" id="supervisor">
-                    </div>
-
-                    <div id="additonalIncome" class="btn-group">
-                        <!-- Convert this into a label and add a text field next to it -->
-                        askndasn
-                    </div>
-
-                    <div class="label-input-pair">
-                        <label for="payFrequency">Pay Frequency</label>
-                        <div name="payFrequency" class="btn-group">
-                            asd
+                    <!-- Employment Information-->
+                    <fieldset class="form-section-body__income-info">
+                        <legend>Employment</legend>
+                        <div class="label-input-pair">
+                            <label for="jobTitle">Job Title</label>
+                            <input type="text" name="jobTitle" id="jobTitle" placeholder="Job Title">
                         </div>
-                    </div>
 
-                    <div class="label-input-pair">
-                        <label for="payPeriod">Pay Period</label>
-                        <input type="text" name="payPeriod" id="payPeriod">
-                    </div>
+                        <div class="label-input-pair">
+                            <label for="employer">Employer</label>
+                            <input type="text" name="employer" id="employer" placeholder="Employer">
+                        </div>
 
-                    <div class="label-input-pair">
-                        <label for="payDay">Pay Day</label>
-                        <input type="text" name="payDay" id="payDay">
-                    </div>
+                        <div class="label-input-pair">
+                            <label for="supevisor">Supervisor</label>
+                            <input type="text" name="supevisor" id="supervisor" placeholder="Supervisor">
+                        </div>
 
+                        <div class="label-input-pair">
+                            <label for="empAddress">Address</label>
+                            <input type="text" name="empAddress" id="empAddress" placeholder="Address">
+                        </div>
+
+                        <div class="label-input-pair">
+                            <label for="address_2"> Address 2 </label>
+                            <input type="text" name="address_2" id="empAddress" placeholder="Address 2" required>
+                        </div>
+
+                        <fieldset class="fieldset-CSZ">
+                            <div class="fieldset-CSZ-pair">
+                                <label for="city"> City </label>
+                                <input type="text" name="empCity" id="city" placeholder="City" required>
+                            </div>
+
+                            <div class="fieldset-CSZ-pair">
+                                <label for="state"> State </label>
+                                <select name="state" id="empState" placeholder="State" required></select>
+                            </div>
+
+                            <div class="fieldset-CSZ-pair">
+                                <label for="zip"> ZIP </label>
+                                <input type="text" name="zip" id="empZip" placeholder="ZIP" required>
+                            </div>
+                        </fieldset>
+
+                        <div class="label-input-pair">
+                            <label for="shift">Shift</label>
+                            <!-- Add Button group here -->
+                            <div id="incomeShift" class="btn-group">
+                                <button>Morning</button>
+                                <button>Afternoon</button>
+                                <button>Midnight</button>
+                            </div>
+                        </div>
+
+                        <div class="label-input-pair">
+                            <label for="hiringDate">Hiring Date</label>
+                            <input type="date" id="hiringDate" name="hiringDate" value="2018-07-22" min="2018-01-01" max="2018-12-31">
+                        </div>
+
+                        <div class="label-input-pair">
+                            <label for="phone">Phone #</label>
+                            <input type="text" name="phone" id="phone" placeholder="Phone #">
+                        </div>
+
+                        <div class="label-input-pair">
+                            <label for="extDept">Extension</label>
+                            <input type="text" name="extDept" id="extDept">
+                        </div>
+
+                        <div id="additonalIncome" class="btn-group">
+                            <!-- Convert this into a label and add a text field next to it -->
+                            askndasn
+                        </div>
+
+                        <div class="label-input-pair">
+                            <label for="payFrequency">Pay Frequency</label>
+                            <div name="payFrequency" class="btn-group">
+                                asd
+                            </div>
+                        </div>
+
+                        <div class="label-input-pair">
+                            <label for="payPeriod">Pay Period</label>
+                            <input type="text" name="payPeriod" id="payPeriod">
+                        </div>
+
+                        <div class="label-input-pair">
+                            <label for="payDay">Pay Day</label>
+                            <input type="text" name="payDay" id="payDay">
+                        </div>
+                    </fieldset>
                 </div>
 
                 <div>

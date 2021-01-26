@@ -79,20 +79,22 @@ legend {
   color: black;
 }
 
-.form-section-body__residence-info, .fieldset-license, .fieldset-MR, .fieldset-LI, .fieldset-RO, .fieldset-CSZ {
+.form-section-body__residence-info, .form-section-body__income-info, .fieldset-license, .fieldset-MR, .fieldset-LI, .fieldset-RO, .fieldset-CSZ {
   font-size: 1em;
   padding: 0.5em;
   border: solid 2px grey !important;
   align-self: center;
 }
-.form-section-body__residence-info label, .fieldset-license label, .fieldset-MR label, .fieldset-LI label, .fieldset-RO label, .fieldset-CSZ label,
+.form-section-body__residence-info label, .form-section-body__income-info label, .fieldset-license label, .fieldset-MR label, .fieldset-LI label, .fieldset-RO label, .fieldset-CSZ label,
 .form-section-body__residence-info input,
+.form-section-body__income-info input,
 .fieldset-license input,
 .fieldset-MR input,
 .fieldset-LI input,
 .fieldset-RO input,
 .fieldset-CSZ input,
 .form-section-body__residence-info button,
+.form-section-body__income-info button,
 .fieldset-license button,
 .fieldset-MR button,
 .fieldset-LI button,
@@ -239,7 +241,7 @@ input[type=text]:active {
   /* Green border */
   color: white;
   /* White text */
-  padding: 10px 24px;
+  padding: 10px 14px;
   /* Some padding */
   cursor: pointer;
   /* Pointer/hand icon */
@@ -567,6 +569,9 @@ input[type=text]:active {
 .form-section-body__income {
   align-items: center;
   padding: 1rem 2rem 1rem 2rem;
+}
+.form-section-body__income-info {
+  width: 100%;
   display: inline-grid;
   grid-template-rows: 0.25fr repeat(5, 1fr);
 }
