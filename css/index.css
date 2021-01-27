@@ -79,14 +79,15 @@ legend {
   color: black;
 }
 
-.form-section-body__residence-info, .form-section-body__income-info, .formset-row-3-c, .formset-row-2-e, .formset-license, .formset-col-3-e, .formset-row-1-c {
+.form-section-body__residence-info, .form-section-body__references-info, .form-section-body__income-info, .formset-row-3-c, .formset-row-2-e, .formset-license, .formset-col-3-e, .formset-row-1-c {
   font-size: 1em;
   padding: 0.5em;
   border: solid 2px grey !important;
   align-self: center;
 }
-.form-section-body__residence-info label, .form-section-body__income-info label, .formset-row-3-c label, .formset-row-2-e label, .formset-license label, .formset-col-3-e label, .formset-row-1-c label,
+.form-section-body__residence-info label, .form-section-body__references-info label, .form-section-body__income-info label, .formset-row-3-c label, .formset-row-2-e label, .formset-license label, .formset-col-3-e label, .formset-row-1-c label,
 .form-section-body__residence-info input,
+.form-section-body__references-info input,
 .form-section-body__income-info input,
 .formset-row-3-c input,
 .formset-row-2-e input,
@@ -94,6 +95,7 @@ legend {
 .formset-col-3-e input,
 .formset-row-1-c input,
 .form-section-body__residence-info button,
+.form-section-body__references-info button,
 .form-section-body__income-info button,
 .formset-row-3-c button,
 .formset-row-2-e button,
@@ -744,6 +746,11 @@ input[type=text]:active {
   padding: 1rem 2rem 1rem 2rem;
   display: inline-grid;
   grid-template-rows: 0.25fr repeat(1, 1fr);
+}
+.form-section-body__references-info {
+  width: 100%;
+  display: inline-grid;
+  grid-template-rows: repeat(8, 1fr);
 }
 @media screen and (max-width: 600px) {
   .form-section-body__references {

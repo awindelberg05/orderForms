@@ -276,7 +276,7 @@
                                     <button>Midnight</button>
                                 </div>
                             </div>
-    
+
                             <div class="label-input-pair">
                                 <label for="hiringDate">Hiring Date</label>
                                 <input type="date" id="hiringDate" name="hiringDate" value="2018-07-22" min="2018-01-01" max="2018-12-31">
@@ -318,7 +318,15 @@
 
                         <div class="label-input-pair">
                             <label for="payDay">Day of Week Paid</label>
-                            <input type="text" name="payDay" id="payDay">
+                            <div name="payDay" class="btn-group">
+                                <button>Monday</button>
+                                <button>Tuesday</button>
+                                <button>Wednesday</button>
+                                <button>Thursday</button>
+                                <button>Friday</button>
+                                <button>Saturday</button>
+                                <button>Sunday</button>
+                            </div>
                         </div>
                     </fieldset>
                 </div>
@@ -334,7 +342,7 @@
             <h3 class="form-section-header form-section-header-references" id="section-header-references"> References </h3>
             <section class="form-section-body" id="references">
                 <div class="form-section-body__references">
-                    <fieldset>
+                    <fieldset class="form-section-body__references-info">
                         <legend>Parent/Relative Reference</legend>
                         <div class="label-input-pair">
                             <label for="rName">Name</label>
@@ -388,47 +396,52 @@
             <section class="form-section-body" id="other">
                 <div class="form-section-body__other">
                     <fieldset>
-                        <div class="label-input-pair">
-                            <label for="vehicleYR">Year</label>
-                            <input type="text" name="vehicleYR" id="vehicleYR" placeholder="Year">
+
+                        <div class="formset-row-3-c">
+                            <div class="label-input-pair">
+                                <label for="vehicleYR">Year</label>
+                                <input type="text" name="vehicleYR" id="vehicleYR" placeholder="Year">
+                            </div>
+
+                            <div class="label-input-pair">
+                                <label for="vehicleYR">Make</label>
+                                <input type="text" name="vehicleMK" id="vehicleMK" placeholder="Make">
+                            </div>
+
+                            <div class="label-input-pair">
+                                <label for="vehicleYR">Model</label>
+                                <input type="text" name="vehicleML" id="vehicleML" placeholder="Model">
+                            </div>
                         </div>
 
-                        <div class="label-input-pair">
-                            <label for="vehicleYR">Make</label>
-                            <input type="text" name="vehicleMK" id="vehicleMK" placeholder="Make">
+                        <div class="formset-row-3-c">
+                            <div class="label-input-pair">
+                                <label for="vehicleYR">Color</label>
+                                <input type="text" name="vehicleCL" id="vehicleCL" placeholder="Color">
+                            </div>
+
+                            <div class="label-input-pair">
+                                <label for="vehicleYR">Tag #</label>
+                                <input type="text" name="vehicleTG" id="vehicleTG" placeholder="Tag">
+                            </div>
+
+                            <div class="label-input-pair">
+                                <label for="vehicleYR">Monthly Payments</label>
+                                <input type="text" name="vehicleMP" id="vehicleMP" placeholder="Monthly Payments">
+                            </div>
                         </div>
 
-                        <div class="label-input-pair">
-                            <label for="vehicleYR">Model</label>
-                            <input type="text" name="vehicleML" id="vehicleML" placeholder="Model">
-                        </div>
 
-                        <div class="label-input-pair">
-                            <label for="vehicleYR">Color</label>
-                            <input type="text" name="vehicleCL" id="vehicleCL" placeholder="Color">
-                        </div>
+                        <div class="formset-row-2-e">
+                            <div class="label-input-pair">
+                                <label for="vehicleYR">Registered To</label>
+                                <input type="text" name="vehicleRG" id="vehicleRG">
+                            </div>
 
-                        <div class="label-input-pair">
-                            <label for="vehicleYR">Tag #</label>
-                            <input type="text" name="vehicleTG" id="vehicleTG" placeholder="Tag">
-                        </div>
-
-                        <div class="label-input-pair">
-                            <label for="vehicleYR">Monthly Payments</label>
-                            <input type="text" name="vehicleMP" id="vehicleMP" placeholder="Monthly Payments">
-                        </div>
-                    </fieldset>
-
-
-                    <fieldset>
-                        <div class="label-input-pair">
-                            <label for="vehicleYR">Registered To</label>
-                            <input type="text" name="vehicleRG" id="vehicleRG">
-                        </div>
-
-                        <div class="label-input-pair">
-                            <label for="vehicleYR">Financed By</label>
-                            <input type="text" name="vehicleFB" id="vehicleFB">
+                            <div class="label-input-pair">
+                                <label for="vehicleYR">Financed By</label>
+                                <input type="text" name="vehicleFB" id="vehicleFB">
+                            </div>
                         </div>
                     </fieldset>
 
