@@ -1,0 +1,19 @@
+// Defaults 
+$width-property: 100% !default;
+$height-property: 100% !default;
+$display-property: block !default;
+$align-self-property: center !default;
+$text-align-property: right !default;
+
+
+%form-label {
+    width: $width-property;
+    height: $height-property;
+    display: $display-property;
+
+    & > a {
+        text-align: $text-align-property;
+        align-self: $align-self-property;
+    }
+}
+

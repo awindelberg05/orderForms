@@ -130,25 +130,24 @@
                             <input type="text" name="address_2" id="zip" placeholder="Address 2" required>
                         </div>
 
-                        <fieldset class="fieldset-CSZ">
-                            <div class="fieldset-CSZ-pair">
+                        <fieldset class="formset-row-3-c">
+                            <div class="formset-child">
                                 <label for="city"> City </label>
                                 <input type="text" name="city" id="city" placeholder="City" required>
                             </div>
 
-                            <div class="fieldset-CSZ-pair">
+                            <div class="formset-child">
                                 <label for="state"> State </label>
                                 <select name="state" id="state" placeholder="State" required></select>
                             </div>
 
-                            <div class="fieldset-CSZ-pair">
+                            <div class="formset-child">
                                 <label for="zip"> ZIP </label>
                                 <input type="text" name="zip" id="zip" placeholder="ZIP" required>
                             </div>
                         </fieldset>
 
-
-                        <fieldset class="fieldset-RO">
+                        <fieldset class="formset-row-2-e">
                             <div>Do you currently rent or own the property listed above?</div>
                             <div>
                                 <label for="rent"> Rent </label>
@@ -161,7 +160,7 @@
                             </div>
                         </fieldset>
 
-                        <fieldset class="fieldset-RO">
+                        <fieldset class="formset-row-2-e">
                             <div>Have you lived in your current residence for more than one year?</div>
                             <div>
                                 <label for="yes"> Yes </label>
@@ -177,7 +176,7 @@
                     </fieldset>
 
 
-                    <fieldset class="fieldset-MR">
+                    <fieldset class="formset-row-1-c">
                         <legend>Rental Information</legend>
                         <div class="label-input-pair">
                             <label for="monthlyPayments"> Monthly Payments </label>
@@ -189,7 +188,7 @@
 
 
 
-                    <fieldset class="fieldset-LI">
+                    <fieldset class="formset-col-3-e">
                         <legend>Landlord Information</legend>
                         <div class="label-input-pair">
                             <label for="landlordName"> Landlord Name </label>
@@ -249,20 +248,20 @@
                             <input type="text" name="address_2" id="empAddress" placeholder="Address 2" required>
                         </div>
 
-                        <fieldset class="fieldset-CSZ">
-                            <div class="fieldset-CSZ-pair">
+                        <fieldset class="formset-row-3-c">
+                            <div class="formset-child">
                                 <label for="city"> City </label>
-                                <input type="text" name="empCity" id="city" placeholder="City" required>
+                                <input type="text" name="city" id="city" placeholder="City" required>
                             </div>
 
-                            <div class="fieldset-CSZ-pair">
+                            <div class="formset-child">
                                 <label for="state"> State </label>
-                                <select name="state" id="empState" placeholder="State" required></select>
+                                <select name="state" id="state" placeholder="State" required></select>
                             </div>
 
-                            <div class="fieldset-CSZ-pair">
+                            <div class="formset-child">
                                 <label for="zip"> ZIP </label>
-                                <input type="text" name="zip" id="empZip" placeholder="ZIP" required>
+                                <input type="text" name="zip" id="zip" placeholder="ZIP" required>
                             </div>
                         </fieldset>
 
@@ -284,15 +283,18 @@
                             </div>
                         </fieldset>
 
-                        <div class="label-input-pair">
-                            <label for="phone">Phone #</label>
-                            <input type="text" name="phone" id="phone" placeholder="Phone #">
-                        </div>
 
-                        <div class="label-input-pair">
-                            <label for="extDept">Extension</label>
-                            <input type="text" name="extDept" id="extDept">
-                        </div>
+                        <fieldset>
+                            <div class="label-input-pair">
+                                <label for="phone">Phone #</label>
+                                <input type="text" name="phone" id="phone" placeholder="Phone #">
+                            </div>
+
+                            <div class="label-input-pair">
+                                <label for="extDept">Extension</label>
+                                <input type="text" name="extDept" id="extDept">
+                            </div>
+                        </fieldset>
 
                         <div id="additonalIncome" class="btn-group">
                             <!-- Convert this into a label and add a text field next to it -->
@@ -302,17 +304,20 @@
                         <div class="label-input-pair">
                             <label for="payFrequency">Pay Frequency</label>
                             <div name="payFrequency" class="btn-group">
-                                asd
+                                <button>Weekly</button>
+                                <button>Bi-Weekly</button>
+                                <button>Semi-Monthly</button>
+                                <button>Monthly</button>
                             </div>
                         </div>
 
                         <div class="label-input-pair">
-                            <label for="payPeriod">Pay Period</label>
+                            <label for="payPeriod">Income Per pay period</label>
                             <input type="text" name="payPeriod" id="payPeriod">
                         </div>
 
                         <div class="label-input-pair">
-                            <label for="payDay">Pay Day</label>
+                            <label for="payDay">Day of Week Paid</label>
                             <input type="text" name="payDay" id="payDay">
                         </div>
                     </fieldset>

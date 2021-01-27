@@ -79,27 +79,27 @@ legend {
   color: black;
 }
 
-.form-section-body__residence-info, .form-section-body__income-info, .fieldset-license, .fieldset-MR, .fieldset-LI, .fieldset-RO, .fieldset-CSZ {
+.form-section-body__residence-info, .form-section-body__income-info, .formset-row-3-c, .formset-row-2-e, .formset-license, .formset-col-3-e, .formset-row-1-c {
   font-size: 1em;
   padding: 0.5em;
   border: solid 2px grey !important;
   align-self: center;
 }
-.form-section-body__residence-info label, .form-section-body__income-info label, .fieldset-license label, .fieldset-MR label, .fieldset-LI label, .fieldset-RO label, .fieldset-CSZ label,
+.form-section-body__residence-info label, .form-section-body__income-info label, .formset-row-3-c label, .formset-row-2-e label, .formset-license label, .formset-col-3-e label, .formset-row-1-c label,
 .form-section-body__residence-info input,
 .form-section-body__income-info input,
-.fieldset-license input,
-.fieldset-MR input,
-.fieldset-LI input,
-.fieldset-RO input,
-.fieldset-CSZ input,
+.formset-row-3-c input,
+.formset-row-2-e input,
+.formset-license input,
+.formset-col-3-e input,
+.formset-row-1-c input,
 .form-section-body__residence-info button,
 .form-section-body__income-info button,
-.fieldset-license button,
-.fieldset-MR button,
-.fieldset-LI button,
-.fieldset-RO button,
-.fieldset-CSZ button {
+.formset-row-3-c button,
+.formset-row-2-e button,
+.formset-license button,
+.formset-col-3-e button,
+.formset-row-1-c button {
   font-size: inherit;
   margin: 0.1em, 0.2em;
   box-sizing: content-box;
@@ -281,24 +281,7 @@ input[type=text]:active {
     align-self: center;
   }
 }
-@supports (display: grid) {
-  .fieldset-CSZ {
-    display: inline-grid;
-    grid-template-rows: 1fr;
-    grid-template-columns: 1fr 0.78fr 0.75fr;
-  }
-}
-.fieldset-CSZ-pair {
-  height: 100%;
-}
-@supports (display: grid) {
-  .fieldset-CSZ-pair {
-    display: inline-grid;
-    grid-template-rows: 1fr;
-    grid-template-columns: 0.73fr 1fr;
-  }
-}
-.fieldset-CSZ-pair > label {
+.formset-child label {
   display: block;
   align-self: center;
   height: 50%;
@@ -307,69 +290,103 @@ input[type=text]:active {
   padding-right: 10%;
 }
 @media screen and (min-width: 600px) {
-  .fieldset-CSZ-pair > label {
+  .formset-child label {
     padding-left: 0;
   }
 }
-.fieldset-CSZ-pair > input {
-  padding-left: 2%;
-  width: 75%;
-}
-.fieldset-CSZ-pair > select {
+.formset-child select {
   display: block;
   align-self: center;
   width: 50%;
   height: 50%;
 }
+.formset-child input {
+  padding-left: 2%;
+  width: 75%;
+}
+.formset-row-1-c {
+  padding: 0 1rem 1rem 1rem;
+  margin-top: 1rem;
+}
 @supports (display: grid) {
-  .fieldset-RO {
+  .formset-row-1-c {
     display: grid;
     grid-template-rows: 1fr;
-    grid-template-columns: 1fr repeat(2, 0.5fr);
+    grid-template-columns: 1fr;
   }
 }
-.fieldset-RO > div > label {
+.formset-row-1-c > div > label {
   display: block;
 }
-.fieldset-RO > div:first-child {
-  text-align: right;
-}
-.fieldset-LI {
+.formset-col-3-e {
   padding: 1rem;
 }
 @supports (display: grid) {
-  .fieldset-LI {
+  .formset-col-3-e {
     display: grid;
     grid-template-rows: repeat(3, 1fr);
     grid-template-columns: 1fr;
   }
 }
-.fieldset-LI > div > label {
-  display: block;
-}
-.fieldset-MR {
-  padding: 0 1rem 1rem 1rem;
-  margin-top: 1rem;
-}
-@supports (display: grid) {
-  .fieldset-MR {
-    display: grid;
-    grid-template-rows: 1fr;
-    grid-template-columns: 1fr;
-  }
-}
-.fieldset-MR > div > label {
-  display: block;
-}
-.fieldset-license {
+.formset-license {
   grid-gap: 0 0;
   border: none !important;
 }
 @supports (display: grid) {
-  .fieldset-license {
+  .formset-license {
     display: grid;
     grid-template-rows: 1fr;
     grid-template-columns: 0.4fr 1fr;
+  }
+}
+@supports (display: grid) {
+  .formset-row-2-e {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr repeat(2, 0.5fr);
+  }
+}
+.formset-row-2-e > div > label {
+  display: block;
+}
+.formset-row-2-e > div:first-child {
+  text-align: right;
+}
+@supports (display: grid) {
+  .formset-row-3-c {
+    display: inline-grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 0.5fr 1fr;
+  }
+}
+.formset-row-3-c > .formset-child:first-child {
+  height: 100%;
+}
+@supports (display: grid) {
+  .formset-row-3-c > .formset-child:first-child {
+    display: inline-grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 0.73fr 1fr;
+  }
+}
+.formset-row-3-c > .formset-child:nth-child(2) {
+  height: 100%;
+}
+@supports (display: grid) {
+  .formset-row-3-c > .formset-child:nth-child(2) {
+    display: inline-grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 0.5fr 1fr;
+  }
+}
+.formset-row-3-c > .formset-child:nth-child(3) {
+  height: 100%;
+}
+@supports (display: grid) {
+  .formset-row-3-c > .formset-child:nth-child(3) {
+    display: inline-grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 0.73fr 1fr;
   }
 }
 
@@ -726,7 +743,7 @@ input[type=text]:active {
   align-items: center;
   padding: 1rem 2rem 1rem 2rem;
   display: inline-grid;
-  grid-template-rows: 0.25fr repeat(5, 1fr);
+  grid-template-rows: 0.25fr repeat(1, 1fr);
 }
 @media screen and (max-width: 600px) {
   .form-section-body__references {
