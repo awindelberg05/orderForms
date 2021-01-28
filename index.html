@@ -59,51 +59,55 @@
             <section class="form-section-body" id="personal">
                 <div class="form-section-body__personal">
 
-                    <div class="label-input-pair--date">
-                        <div id="crntDate" class="form-section-body-date p-crntDate"></div>
-                    </div>
-
-                    <div class="label-input-pair p-fname">
-                        <label for="fname">First Name</label>
-                        <input type="text" name="fname" placeholder="First Name" required>
-                    </div>
-
-                    <div class="label-input-pair p-lname">
-                        <label for="lname">Last Name</label>
-                        <input type="text" name="lname" placeholder="Last Name" required>
-                    </div>
-
-                    <div class="label-input-pair p-email">
-                        <label for="email">Email</label>
-                        <input type="text" name="email" id="email" placeholder="Email" required>
-                    </div>
-
-                    <div class="label-input-pair p-phone">
-                        <label for="phoneNumber">Phone #</label>
-                        <input type="text" name="phoneNumber" placeholder="Phone #" required>
-                    </div>
-
-                    <div class="label-input-pair p-license-number">
-                        <label for="licenseNumber">License #</label>
-                        <input type="text" id="licenseNumber" name="licenseNumber" placeholder="License #" required>
-                    </div>
-
-                    <fieldset class="fieldset-license">
-                        <div class="label-select-pair p-license-state">
-                            <label for="licenseState">State</label>
-                            <select id="licenseState" name="licenseState" required></select>
+                    <fieldset class="form-section-body__personal-info">
+                        <legend>Personal Information</legend>
+                        <div class="label-input-pair--date">
+                            <div id="crntDate" class="form-section-body-date p-crntDate"></div>
                         </div>
 
-                        <div class="label-date-pair p-license-date">
-                            <label for="expDate">Expiration Date</label>
-                            <input type="date" id="licenseExp" name="expDate" required>
+                        <div class="label-input-pair p-fname">
+                            <label for="fname">First Name</label>
+                            <input type="text" name="fname" id="fname" placeholder="First Name" required>
                         </div>
+
+                        <div class="label-input-pair p-lname">
+                            <label for="lname">Last Name</label>
+                            <input type="text" name="lname" id="lname" placeholder="Last Name" required>
+                        </div>
+
+                        <div class="label-input-pair p-email">
+                            <label for="email">Email</label>
+                            <input type="text" name="email" id="email" placeholder="Email" required>
+                        </div>
+
+                        <div class="label-input-pair p-phone">
+                            <label for="phoneNumber">Phone #</label>
+                            <input type="text" name="phoneNumber" id="phoneNumber" placeholder="Phone #" required>
+                        </div>
+
+                        <div class="label-input-pair p-license-number">
+                            <label for="licenseNumber">License #</label>
+                            <input type="text" id="licenseNumber" name="licenseNumber" placeholder="License #" required>
+                        </div>
+
+                        <fieldset class="fieldset-license">
+                            <div class="label-select-pair p-license-state">
+                                <label for="licenseState">State</label>
+                                <select id="licenseState" name="licenseState" required></select>
+                            </div>
+
+                            <div class="label-date-pair p-license-date">
+                                <label for="expDate">Expiration Date</label>
+                                <input type="date" id="licenseExp" name="expDate" required>
+                            </div>
+                        </fieldset>
+
+                        <div class="p-co-applicant">
+                            <!-- <label class="coApplicantLbl" for="coApplicantBtn">Add a Co-Applicant ?</label> -->
+                            <input type="checkbox" id="coApplicantBtn">Add a Co-Applicant ?</input>
+                        </div>
+
                     </fieldset>
-
-                    <div class="p-co-applicant">
-                        <!-- <label class="coApplicantLbl" for="coApplicantBtn">Add a Co-Applicant ?</label> -->
-                        <input type="checkbox" id="coApplicantBtn">Add a Co-Applicant ?</input>
-                    </div>
                 </div>
 
                 <div>
@@ -127,23 +131,23 @@
 
                         <div class="label-input-pair">
                             <label for="address_2"> Address 2 </label>
-                            <input type="text" name="address_2" id="zip" placeholder="Address 2" required>
+                            <input type="text" name="address_2" id="address_2" placeholder="Address 2" required>
                         </div>
 
                         <fieldset class="formset-row-3-c">
                             <div class="formset-child">
-                                <label for="city"> City </label>
-                                <input type="text" name="city" id="city" placeholder="City" required>
+                                <label for="resCity"> City </label>
+                                <input type="text" name="resCity" id="resCity" placeholder="City" required>
                             </div>
 
                             <div class="formset-child">
-                                <label for="state"> State </label>
-                                <select name="state" id="state" placeholder="State" required></select>
+                                <label for="resState"> State </label>
+                                <select name="resState" id="resState" placeholder="State" required></select>
                             </div>
 
                             <div class="formset-child">
-                                <label for="zip"> ZIP </label>
-                                <input type="text" name="zip" id="zip" placeholder="ZIP" required>
+                                <label for="resZip"> ZIP </label>
+                                <input type="text" name="resZip" id="resZip" placeholder="ZIP" required>
                             </div>
                         </fieldset>
 
@@ -196,8 +200,8 @@
                         </div>
 
                         <div class="label-input-pair">
-                            <label for="landlordPhone"> Landlord Phone # </label>
-                            <input type="text" name="landlordPhone" id="landlordPhone" placeholder="Landlord Phone #">
+                            <label for="landlordPhone"> Phone # </label>
+                            <input type="text" name="landlordPhone" id="landlordPhone" placeholder="Phone #">
                         </div>
 
                         <div class="label-input-pair">

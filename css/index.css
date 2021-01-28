@@ -7,8 +7,8 @@
 //    Variables
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////
 */
-/*
-    Grid Mixin
+/*  
+
     -webkit- (Chrome, Safari, newer versions of Opera, almost all iOS browsers including Firefox for iOS; basically, any WebKit based browser)
     -moz- (Firefox)
     -o- (old pre-WebKit versions of Opera)
@@ -79,15 +79,15 @@ legend {
   color: black;
 }
 
-.form-section-body__residence-info, .form-section-body__references-info, .form-section-body__income-info, .formset-row-3-c, .formset-row-2-e, .formset-license, .formset-col-3-e, .formset-row-1-c {
+.form-section-body__residence-info, .form-section-body__references-info, .form-section-body__personal-info, .form-section-body__income-info, .formset-row-3-c, .formset-row-2-e, .formset-license, .formset-col-3-e, .formset-row-1-c {
   font-size: 1em;
-  padding: 0.5em;
   border: solid 2px grey !important;
   align-self: center;
 }
-.form-section-body__residence-info label, .form-section-body__references-info label, .form-section-body__income-info label, .formset-row-3-c label, .formset-row-2-e label, .formset-license label, .formset-col-3-e label, .formset-row-1-c label,
+.form-section-body__residence-info label, .form-section-body__references-info label, .form-section-body__personal-info label, .form-section-body__income-info label, .formset-row-3-c label, .formset-row-2-e label, .formset-license label, .formset-col-3-e label, .formset-row-1-c label,
 .form-section-body__residence-info input,
 .form-section-body__references-info input,
+.form-section-body__personal-info input,
 .form-section-body__income-info input,
 .formset-row-3-c input,
 .formset-row-2-e input,
@@ -96,6 +96,7 @@ legend {
 .formset-row-1-c input,
 .form-section-body__residence-info button,
 .form-section-body__references-info button,
+.form-section-body__personal-info button,
 .form-section-body__income-info button,
 .formset-row-3-c button,
 .formset-row-2-e button,
@@ -411,17 +412,8 @@ input[type=text]:active {
 //   Label & Date bahavior
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////
 */
-.label-date-pair {
-  font-size: 1.2rem;
-}
-@media screen and (min-width: 1100px) {
-  .label-date-pair {
-    display: inline-grid;
-    grid-template-columns: 0.5fr 1fr;
-  }
-}
 .label-date-pair > label {
-  display: block;
+  display: inline-block;
   height: 50%;
   text-align: center;
   padding-top: 1rem;
@@ -436,6 +428,12 @@ input[type=text]:active {
   height: 50%;
   width: 60%;
   margin: 0.68rem;
+}
+@media screen and (min-width: 1100px) {
+  .label-date-pair {
+    display: inline-grid;
+    grid-template-columns: 0.5fr 1fr;
+  }
 }
 
 /*
@@ -463,6 +461,7 @@ input[type=text]:active {
 @media screen and (min-width: 600px) {
   .label-input-pair > label {
     padding-left: 0;
+    text-align: left;
   }
 }
 
@@ -688,14 +687,17 @@ input[type=text]:active {
   height: auto;
   align-items: center;
   padding: 1rem 2rem 1rem 2rem;
-  display: inline-grid;
-  grid-template-rows: 0.25fr repeat(5, 1fr);
   /*
       Form-Section-Body-Persoanl Media Query for Devices less than 600
   */
   /*
       Form-Section-Body-Persoanl Media Query for Devices more than 600
   */
+}
+.form-section-body__personal-info {
+  width: 100%;
+  display: inline-grid;
+  grid-template-rows: 0.25fr repeat(5, 1fr);
 }
 @media screen and (max-width: 600px) {
   .form-section-body__personal {

@@ -1,5 +1,5 @@
-/*
-    Grid Mixin
+/*  
+
     -webkit- (Chrome, Safari, newer versions of Opera, almost all iOS browsers including Firefox for iOS; basically, any WebKit based browser)
     -moz- (Firefox)
     -o- (old pre-WebKit versions of Opera)
@@ -47,5 +47,3 @@
         grid-template-columns: #{$grid-cols};
     }
 }
-
-@mixin fieldSetBuilder () {}
